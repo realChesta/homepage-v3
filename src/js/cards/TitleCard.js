@@ -14,6 +14,7 @@ import GithubIcon from '../../img/github.svg';
 import SvgIcon from "@material-ui/core/SvgIcon";
 import MailIcon from '@material-ui/icons/Mail';
 import Tooltip from "@material-ui/core/Tooltip";
+import Card from "@material-ui/core/Card";
 
 const useStyles = makeStyles(theme => ({
     cardRoot: {
@@ -36,7 +37,7 @@ const TitleCard = props => {
 
     return (
         <Grid item xs={3}>
-            <Paper className={classes.cardRoot}>
+            <Card className={classes.cardRoot}>
                 <CardContent>
                     <Typography variant="h2">Hello.</Typography>
                     <Typography variant="p">
@@ -69,7 +70,7 @@ const TitleCard = props => {
 
                     </IconButton>
                 </CardActions>
-            </Paper>
+            </Card>
         </Grid>
     );
 };

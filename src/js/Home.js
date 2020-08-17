@@ -4,6 +4,7 @@ import makeStyles from "@material-ui/core/styles/makeStyles.js";
 import Grid from "@material-ui/core/Grid";
 import TitleCard from "./cards/TitleCard.js";
 import Backdrop from "./Backdrop.js";
+import PersonalCard from "./cards/PersonalCard.js";
 
 const useStyles = makeStyles(theme => ({
     background: {
@@ -21,8 +22,10 @@ const Home = props => {
                 container
                 justify="center" alignItems="center"
                 className={classes.background}
+                spacing={2}
             >
                 <TitleCard/>
+                <PersonalCard/>
             </Grid>
         </Backdrop>
     );
