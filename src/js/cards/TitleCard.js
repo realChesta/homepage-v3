@@ -41,17 +41,17 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const TitleCard = props => {
+const TitleCard = () => {
     const classes = useStyles();
 
     return (
-        <CardWrapper width="30em">
+        <CardWrapper>
             <Card className={classes.cardRoot}>
                 <CardContent className={classes.cardContent}>
                     <Typography variant="h2" className={classes.helloTypo}>
                         Hello!
                     </Typography>
-                    <Typography variant="p" className={classes.titleText}>
+                    <Typography className={classes.titleText}>
                         I'm Kyrill, a {getMyAge()} year old third year
                         informatics student at the University of Zurich.
                     </Typography>

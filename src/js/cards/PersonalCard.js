@@ -28,11 +28,9 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const PersonalCard = props => {
-    const classes = useStyles();
-
+const PersonalCard = () => {
     return (
-        <CardWrapper width="30em">
+        <CardWrapper>
             <Card>
                 <CardContent>
                     <IconTitle icon="person">
@@ -71,7 +69,7 @@ const PersonalCard = props => {
 const GridHeader = props => {
     const classes = useStyles();
     return (
-        <Grid item xs={6} className={classes.gridHeader}>
+        <Grid item xs={5} className={classes.gridHeader}>
             {props.children}
         </Grid>
     );
@@ -79,7 +77,7 @@ const GridHeader = props => {
 
 const GridValue = props => {
     return (
-        <Grid item xs={6}>
+        <Grid item xs={7}>
             {props.children}
         </Grid>
     )
