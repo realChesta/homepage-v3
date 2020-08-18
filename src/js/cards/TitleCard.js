@@ -58,26 +58,26 @@ const TitleCard = props => {
                 </CardContent>
                 <CardActions className={classes.cardActions}>
                     <Tooltip title="My GitHub" placement="right">
-                        <IconButton>
+                        <IconButton target="_blank" href="https://github.com/realChesta">
                             <SvgIcon>
                                 <InlineSVG src={GithubIcon}/>
                             </SvgIcon>
                         </IconButton>
                     </Tooltip>
                     <Tooltip title="Shoot me an E-Mail!" placement="right">
-                        <IconButton>
+                        <IconButton target="_blank" href="mailto:kyrill.hux@gmail.com">
                             <MailIcon/>
                         </IconButton>
                     </Tooltip>
                     <Tooltip title='Matura Paper "SoNNic"' placement="right">
-                        <IconButton>
+                        <IconButton target="_blank" href="http://khux.ch/mng/sonnic">
                             <SvgIcon>
                                 <InlineSVG src={SonnicIcon}/>
                             </SvgIcon>
                         </IconButton>
                     </Tooltip>
                     <Tooltip title="My Rocket League Tracker" placement="right">
-                        <IconButton>
+                        <IconButton target="_blank" href="https://rocketleague.tracker.network/profile/steam/realchesta">
                             <SvgIcon>
                                 <InlineSVG src={RocketLeagueIcon}/>
                             </SvgIcon>

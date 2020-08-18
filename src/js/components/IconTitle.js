@@ -1,6 +1,7 @@
 import React from 'react';
 import makeStyles from "@material-ui/core/styles/makeStyles.js";
 import Icon from "@material-ui/core/Icon";
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
     container: {
@@ -26,6 +27,10 @@ const IconTitle = props => {
             </label>
         </div>
     );
+};
+
+IconTitle.propTypes = {
+    icon: PropTypes.string
 };
 
 export default IconTitle;
