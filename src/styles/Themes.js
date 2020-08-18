@@ -1,15 +1,23 @@
 import {createMuiTheme} from "@material-ui/core";
 
+const typography = {
+    fontFamily: [
+        'Nunito',
+        'sans-serif'
+    ]
+};
+
 export const lightTheme = createMuiTheme({
     palette: {
         type: "light",
         primary: {
-            main: '#b3506e'
+            main: '#cc667c'
         },
         secondary: {
             main: '#fee140'
         }
-    }
+    },
+    typography
 });
 
 export const darkTheme = createMuiTheme({
@@ -21,12 +29,13 @@ export const darkTheme = createMuiTheme({
         secondary: {
             main: '#fee140'
         }
-    }
+    },
+    typography
 });
 
 const getCurrentTheme = () => {
     return lightTheme;
-}
+};
 
 export default {
     getCurrentTheme

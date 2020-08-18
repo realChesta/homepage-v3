@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
-import {makeStyles} from "@material-ui/core/styles";
 import {Typography} from "@material-ui/core";
 import {getMyAge} from "../utils.js";
 import IconButton from "@material-ui/core/IconButton";
 import InlineSVG from "react-inlinesvg";
 import SonnicIcon from '../../img/sonnic.svg';
 import GithubIcon from '../../img/github.svg';
+import RocketLeagueIcon from '../../img/rocket-league.svg';
 import SvgIcon from "@material-ui/core/SvgIcon";
 import MailIcon from '@material-ui/icons/Mail';
 import Tooltip from "@material-ui/core/Tooltip";
 import Card from "@material-ui/core/Card";
+import CardWrapper from "../components/CardWrapper.js";
+import makeStyles from "@material-ui/core/styles/makeStyles.js";
 
 const useStyles = makeStyles(theme => ({
     cardRoot: {
@@ -29,6 +29,15 @@ const useStyles = makeStyles(theme => ({
         '& > :not(first-child)': {
             margin: '0 !important'
         }
+    },
+    cardContent: {
+      flexGrow: 1
+    },
+    helloTypo: {
+        fontWeight: 300,
+    },
+    titleText: {
+        fontWeight: 400
     }
 }));
 
@@ -36,11 +45,13 @@ const TitleCard = props => {
     const classes = useStyles();
 
     return (
-        <Grid item xs={3}>
+        <CardWrapper width="30em">
             <Card className={classes.cardRoot}>
-                <CardContent>
-                    <Typography variant="h2">Hello.</Typography>
-                    <Typography variant="p">
+                <CardContent className={classes.cardContent}>
+                    <Typography variant="h2" className={classes.helloTypo}>
+                        Hello!
+                    </Typography>
+                    <Typography variant="p" className={classes.titleText}>
                         I'm Kyrill, a {getMyAge()} year old third year
                         informatics student at the University of Zurich.
                     </Typography>
@@ -65,13 +76,16 @@ const TitleCard = props => {
                             </SvgIcon>
                         </IconButton>
                     </Tooltip>
-
-                    <IconButton>
-
-                    </IconButton>
+                    <Tooltip title="My Rocket League Tracker" placement="right">
+                        <IconButton>
+                            <SvgIcon>
+                                <InlineSVG src={RocketLeagueIcon}/>
+                            </SvgIcon>
+                        </IconButton>
+                    </Tooltip>
                 </CardActions>
             </Card>
-        </Grid>
+        </CardWrapper>
     );
 };
 
