@@ -5,40 +5,49 @@ import TitleCard from "./cards/TitleCard.js";
 import Backdrop from "./Backdrop.js";
 import PersonalCard from "./cards/PersonalCard.js";
 import EducationCard from "./cards/EducationCard.js";
+import ExperienceCard from "./cards/ExperienceCard.js";
+import Masonry from "react-masonry-css";
 
 const useStyles = makeStyles(theme => ({
-    outerContainer: {
-        width: '100vw',
-        height: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    innerContainer: {
-        maxWidth: '100vw',
-        maxHeight: '100vh',
-        display: 'flex',
-        alignItems: 'top',
-        justifyContent: 'center',
-        flexWrap: 'wrap',
-        overflow: 'auto',
-    }
+  outerContainer: {
+    width: '100vw',
+    height: '100vh',
+    display: 'flex',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    overflow: 'auto'
+  },
+  innerContainer: {
+    display: 'flex',
+  },
+  column: {}
 }));
 
-const Home = () => {
-    const classes = useStyles();
+const breakpoints = {
+  default: 3,
+  1500: 2,
+  1000: 1
+};
 
-    return (
-        <Backdrop>
-            <div className={classes.outerContainer}>
-                <div className={classes.innerContainer}>
-                    <TitleCard/>
-                    <PersonalCard/>
-                    <EducationCard/>
-                </div>
-            </div>
-        </Backdrop>
-    );
+const Home = () => {
+  const classes = useStyles();
+
+  return (
+    <Backdrop>
+      <div className={classes.outerContainer}>
+      <Masonry
+        className={classes.innerContainer}
+        columnClassName={classes.column}
+        breakpointCols={breakpoints}
+      >
+        <TitleCard/>
+        <PersonalCard/>
+        <EducationCard/>
+        <ExperienceCard/>
+      </Masonry>
+      </div>
+    </Backdrop>
+  );
 };
 
 Home.propTypes = {};

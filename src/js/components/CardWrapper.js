@@ -6,7 +6,7 @@ const useStyles = makeStyles(theme => ({
     cardWrapper: {
         flexShrink: 0,
         margin: theme.spacing(2),
-        width: '30em'
+        width: '32em'
     }
 }));
 
