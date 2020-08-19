@@ -25,8 +25,8 @@ const useStyles = makeStyles(theme => ({
 
 const breakpoints = {
   default: 3,
-  1500: 2,
-  1000: 1
+  1630: 2,
+  1100: 1
 };
 
 const Home = () => {

@@ -7,6 +7,7 @@ import IconTitle, {IconSubTitle} from "../components/IconTitle.js";
 import Card from "@material-ui/core/Card";
 import LinearTimeline from "../components/LinearTimeline.js";
 import {Divider} from "@material-ui/core";
+import EventList from "../components/EventList.js";
 
 const work = [
   {
@@ -35,9 +36,18 @@ const other = [
   }
 ];
 
-const useStyles = makeStyles(theme => ({}));
+const useStyles = makeStyles(theme => ({
+  inset: {
+    marginLeft: '1em'
+  },
+  divider: {
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(2)
+  }
+}));
 
 const ExperienceCard = props => {
+  const classes = useStyles();
   return (
     <CardWrapper>
       <Card>
@@ -45,11 +55,19 @@ const ExperienceCard = props => {
           <IconTitle icon="work">
             Experience
           </IconTitle>
-          <IconSubTitle icon="class">
-            Work Experience
-          </IconSubTitle>
+          <div className={classes.inset}>
+            <IconSubTitle icon="class">
+              Work Experience
+            </IconSubTitle>
+          </div>
           <LinearTimeline items={work}/>
-          <Divider variant="middle"/>
+          {/*<Divider variant="middle" className={classes.divider}/>*/}
+          <div className={classes.inset}>
+            <IconSubTitle icon="speaker_notes">
+              Other Experience
+            </IconSubTitle>
+          </div>
+          <EventList items={other}/>
         </CardContent>
       </Card>
     </CardWrapper>

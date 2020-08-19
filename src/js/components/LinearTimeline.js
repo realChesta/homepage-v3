@@ -41,6 +41,9 @@ const useStyles = makeStyles(theme => ({
     },
     iconTextTypo: {
         marginLeft: theme.spacing(0.5)
+    },
+    lastConnector: {
+        background: `linear-gradient(180deg, ${theme.palette.grey[400]} 25%, transparent 100%)`
     }
 }));
 
@@ -56,29 +59,18 @@ const LinearTimeline = props => {
             </TimelineOppositeContent>
             <TimelineSeparator className={classes.separator}>
                 <TimelineDot variant="outlined" color="primary"/>
-                <TimelineConnector/>
+                <TimelineConnector
+                    className={index === 0 ? classes.lastConnector : null}
+                />
             </TimelineSeparator>
             <TimelineContent>
-                <Card variant="outlined">
-                    <CardContent>
-                        <Typography color="primary" className={classes.itemTitle}>
-                            {item.title}
-                        </Typography>
-                        <Typography className={classes.itemDescription}>
-                            {item.description}
-                        </Typography>
-                    </CardContent>
-                    <CardActions className={classes.itemFooter}>
-                        <Typography color="textSecondary">{item.duration}</Typography>
-                        <IconText icon="place">{item.location}</IconText>
-                    </CardActions>
-                </Card>
+                <EventCard event={item}/>
             </TimelineContent>
         </TimelineItem>
     );
 
     if (props.nowItem) {
-        events.push(<Now/>);
+        events.push(<Now key="now"/>);
     }
 
     // newest items should be displayed first
@@ -93,7 +85,8 @@ const LinearTimeline = props => {
 
 LinearTimeline.propTypes = {
     items: PropTypes.array.isRequired,
-    nowItem: PropTypes.bool
+    nowItem: PropTypes.bool,
+    disconnected: PropTypes.bool
 };
 
 const IconText = props => {
@@ -105,6 +98,28 @@ const IconText = props => {
                 {props.children}
             </Typography>
         </div>
+    );
+};
+
+export const EventCard = props => {
+    const classes = useStyles();
+    const item = props.event;
+
+    return (
+        <Card variant="outlined">
+            <CardContent>
+                <Typography color="primary" className={classes.itemTitle}>
+                    {item.title}
+                </Typography>
+                <Typography className={classes.itemDescription}>
+                    {item.description}
+                </Typography>
+            </CardContent>
+            <CardActions className={classes.itemFooter}>
+                <Typography color="textSecondary">{item.duration}</Typography>
+                <IconText icon="place">{item.location}</IconText>
+            </CardActions>
+        </Card>
     );
 };
 
