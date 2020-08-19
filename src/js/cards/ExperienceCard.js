@@ -61,9 +61,8 @@ const ExperienceCard = props => {
             </IconSubTitle>
           </div>
           <LinearTimeline items={work}/>
-          {/*<Divider variant="middle" className={classes.divider}/>*/}
           <div className={classes.inset}>
-            <IconSubTitle icon="speaker_notes">
+            <IconSubTitle icon="article">
               Other Experience
             </IconSubTitle>
           </div>
