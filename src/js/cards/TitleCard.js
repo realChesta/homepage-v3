@@ -19,7 +19,7 @@ import makeStyles from "@material-ui/core/styles/makeStyles.js";
 const useStyles = makeStyles(theme => ({
     cardRoot: {
         backgroundColor: theme.palette.primary.main,
-        color: theme.palette.primary.contrastText,
+        color: theme.palette.background.paper,
         display: 'flex',
         overflow: 'hidden'
     },

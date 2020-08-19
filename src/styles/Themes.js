@@ -1,4 +1,5 @@
 import {createMuiTheme} from "@material-ui/core";
+import {light} from "@material-ui/core/styles/createPalette.js";
 
 const typography = {
     fontFamily: [
@@ -24,7 +25,7 @@ export const darkTheme = createMuiTheme({
     palette: {
         type: "dark",
         primary: {
-            main: '#b3506e'
+            main: '#fa709a'
         },
         secondary: {
             main: '#fee140'
@@ -33,10 +34,24 @@ export const darkTheme = createMuiTheme({
     typography
 });
 
-const getCurrentTheme = () => {
-    return lightTheme;
+const getCurrentTheme = () => isDarkTheme() ? darkTheme : lightTheme;
+
+const setDarkTheme = (enable) => {
+    localStorage.setItem('darkMode', enable);
+    if (themeCallback) {
+        themeCallback(enable);
+    }
+};
+const isDarkTheme = () => localStorage.getItem('darkMode') === 'true';
+
+let themeCallback;
+let onThemeChange = (callback) => {
+    themeCallback = callback;
 };
 
 export default {
-    getCurrentTheme
+    getCurrentTheme,
+    isDarkTheme,
+    setDarkTheme,
+    onThemeChange
 }

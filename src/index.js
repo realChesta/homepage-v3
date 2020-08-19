@@ -1,15 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Home from "./js/Home.js";
-import themes from './styles/Themes.js';
-import {ThemeProvider} from '@material-ui/core/styles';
+import {ThemeProvider} from "@material-ui/core/styles";
+import themes from "./styles/Themes.js";
 
-ReactDOM.render(
-    <React.StrictMode>
+const Root = () => {
+    const [darkMode, setDarkMode] = useState(themes.isDarkTheme());
+    themes.onThemeChange(enable => {
+        setDarkMode(enable);
+    });
+
+    return (
         <ThemeProvider theme={themes.getCurrentTheme()}>
             <Home/>
         </ThemeProvider>
-    </React.StrictMode>,
+    );
+};
+
+ReactDOM.render(<Root/>,
     document.getElementById('root')
 );
