@@ -24,13 +24,17 @@ const useStyles = makeStyles(theme => ({
         transform: 'translateY(0.25em)'
     },
     itemTitle: {
-        fontWeight: 600
+        fontWeight: 600,
+        lineHeight: '1em',
+        marginBottom: '0.2em'
     },
     itemDescription: {
-        lineHeight: '1.1em'
+        lineHeight: '1.1em',
+        whiteSpace: 'pre-line'
     },
     itemFooter: {
         justifyContent: 'space-between',
+        flexWrap: 'wrap',
         paddingTop: 0,
         marginLeft: theme.spacing(1)
     },
@@ -116,8 +120,14 @@ export const EventCard = props => {
                 </Typography>
             </CardContent>
             <CardActions className={classes.itemFooter}>
-                <Typography color="textSecondary">{item.duration}</Typography>
-                <IconText icon="place">{item.location}</IconText>
+                <Typography color="textSecondary">
+                    {item.duration}
+                </Typography>
+                <div style={{marginLeft: 'auto'}}>
+                    <IconText icon="place">
+                        {item.location}
+                    </IconText>
+                </div>
             </CardActions>
         </Card>
     );

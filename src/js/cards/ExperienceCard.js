@@ -21,7 +21,7 @@ const work = [
     year: 2020,
     title: "SEC Consult (Schweiz) AG",
     location: "Zürich, CH",
-    description: "Associate Security Consultant\n(Intern) 100%",
+    description: "Associate Security Consultant (Intern)\n100%",
     duration: "Jul. 2020 - present"
   }
 ];

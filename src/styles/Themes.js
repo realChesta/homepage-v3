@@ -1,5 +1,4 @@
 import {createMuiTheme} from "@material-ui/core";
-import {light} from "@material-ui/core/styles/createPalette.js";
 
 const typography = {
     fontFamily: [

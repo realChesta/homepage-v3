@@ -22,9 +22,14 @@ const useStyles = makeStyles(theme => ({
         overflow: 'auto'
     },
     innerContainer: {
-        display: 'flex',
+        marginTop: theme.spacing(1),
+        marginBottom: theme.spacing(1),
+        display: 'flex'
     },
-    column: {},
+    column: {
+        display: 'flex',
+        flexDirection: 'column'
+    },
     themeSwitcher: {
         position: 'fixed',
         bottom: '5vh',

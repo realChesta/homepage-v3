@@ -5,8 +5,9 @@ import makeStyles from "@material-ui/core/styles/makeStyles.js";
 const useStyles = makeStyles(theme => ({
     cardWrapper: {
         flexShrink: 0,
-        margin: theme.spacing(2),
-        width: '32em'
+        margin: theme.spacing(1),
+        width: '32em',
+        maxWidth: `calc(100vw - ${theme.spacing(4)}px)`
     }
 }));
 
