@@ -15,23 +15,39 @@ import Tooltip from "@material-ui/core/Tooltip";
 import Card from "@material-ui/core/Card";
 import CardWrapper from "../components/CardWrapper.js";
 import makeStyles from "@material-ui/core/styles/makeStyles.js";
+import themes from "../../styles/Themes.js";
 
 const useStyles = makeStyles(theme => ({
     cardRoot: {
-        backgroundColor: theme.palette.primary.main,
-        color: theme.palette.background.paper,
+        backgroundColor: theme.palette.background.paper,
+        color: theme.palette.primary.main,
         display: 'flex',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        '&:not(.dark)': {
+            backgroundColor: theme.palette.primary.main,
+            color: theme.palette.background.paper
+        },
+        '&.dark': {
+            backgroundColor: theme.palette.background.paper,
+            color: theme.palette.primary.main,
+        }
     },
     cardActions: {
         flexDirection: 'column',
-        backgroundColor: theme.palette.background.paper,
+        '&:not(dark)': {
+            backgroundColor: theme.palette.background.paper,
+            color: theme.palette.text.secondary
+        },
+        '&.dark': {
+            backgroundColor: theme.palette.primary.main,
+            color: theme.palette.background.paper,
+        },
         '& > :not(first-child)': {
             margin: '0 !important'
         }
     },
     cardContent: {
-      flexGrow: 1
+        flexGrow: 1
     },
     helloTypo: {
         fontWeight: 300,
@@ -44,9 +60,17 @@ const useStyles = makeStyles(theme => ({
 const TitleCard = () => {
     const classes = useStyles();
 
+    let cardRootClass = classes.cardRoot;
+    let cardActionsClass = classes.cardActions;
+
+    if (themes.isDarkTheme()) {
+        cardRootClass += ' dark';
+        cardActionsClass += ' dark';
+    }
+
     return (
         <CardWrapper>
-            <Card className={classes.cardRoot}>
+            <Card className={cardRootClass}>
                 <CardContent className={classes.cardContent}>
                     <Typography variant="h2" className={classes.helloTypo}>
                         Hello!
@@ -56,28 +80,29 @@ const TitleCard = () => {
                         informatics student at the University of Zurich.
                     </Typography>
                 </CardContent>
-                <CardActions className={classes.cardActions}>
+                <CardActions className={cardActionsClass}>
                     <Tooltip title="My GitHub" placement="right">
-                        <IconButton target="_blank" href="https://github.com/realChesta">
+                        <IconButton target="_blank" href="https://github.com/realChesta" color="inherit">
                             <SvgIcon>
                                 <InlineSVG src={GithubIcon}/>
                             </SvgIcon>
                         </IconButton>
                     </Tooltip>
                     <Tooltip title="Shoot me an E-Mail!" placement="right">
-                        <IconButton target="_blank" href="mailto:kyrill.hux@gmail.com">
+                        <IconButton target="_blank" href="mailto:kyrill.hux@gmail.com" color="inherit">
                             <MailIcon/>
                         </IconButton>
                     </Tooltip>
                     <Tooltip title='Matura Paper "SoNNic"' placement="right">
-                        <IconButton target="_blank" href="http://khux.ch/mng/sonnic">
+                        <IconButton target="_blank" href="http://khux.ch/mng/sonnic" color="inherit">
                             <SvgIcon>
                                 <InlineSVG src={SonnicIcon}/>
                             </SvgIcon>
                         </IconButton>
                     </Tooltip>
                     <Tooltip title="My Rocket League Tracker" placement="right">
-                        <IconButton target="_blank" href="https://rocketleague.tracker.network/profile/steam/realchesta">
+                        <IconButton target="_blank" href="https://rocketleague.tracker.network/profile/steam/realchesta"
+                                    color="inherit">
                             <SvgIcon>
                                 <InlineSVG src={RocketLeagueIcon}/>
                             </SvgIcon>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import PropTypes from 'prop-types';
 import makeStyles from "@material-ui/core/styles/makeStyles.js";
 import TitleCard from "./cards/TitleCard.js";
@@ -11,6 +11,7 @@ import Fab from "@material-ui/core/Fab";
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import themes from "../styles/Themes.js";
+import AchievementsCard from "./cards/AchievementsCard.js";
 
 const useStyles = makeStyles(theme => ({
     outerContainer: {
@@ -65,6 +66,7 @@ const Home = () => {
                     <PersonalCard/>
                     <EducationCard/>
                     <ExperienceCard/>
+                    <AchievementsCard/>
                 </Masonry>
             </div>
             <Fab
