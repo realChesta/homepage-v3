@@ -33,8 +33,8 @@ const useStyles = makeStyles(theme => ({
     },
     themeSwitcher: {
         position: 'fixed',
-        bottom: '5vh',
-        right: '5vh',
+        bottom: '5vmin',
+        right: '5vmin',
     },
     themeIcon: {
         color: theme.palette.background.paper
