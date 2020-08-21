@@ -6,7 +6,6 @@ const typography = {
         'sans-serif'
     ]
 };
-
 const rootTransition = {root: {transition: 'background-color 0.5s, color 0.5s'}};
 const overrides = {
     MuiPaper: rootTransition,
@@ -17,6 +16,9 @@ const overrides = {
     MuiIcon: rootTransition,
     MuiListItemText: {primary: {transition: '0s'}}
 };
+
+const primary = '#ff9393';
+const secondary = '#e2cc95';
 
 export const lightTheme = createMuiTheme({
     palette: {
@@ -36,10 +38,10 @@ export const darkTheme = createMuiTheme({
     palette: {
         type: "dark",
         primary: {
-            main: '#fa709a'
+            main: '#ff809b'
         },
         secondary: {
-            main: '#fee140'
+            main: '#ffc44d'
         }
     },
     typography,
@@ -65,5 +67,6 @@ export default {
     getCurrentTheme,
     isDarkTheme,
     setDarkTheme,
-    onThemeChange
+    onThemeChange,
+    colors: {primary, secondary}
 }

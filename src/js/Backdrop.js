@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import makeStyles from "@material-ui/core/styles/makeStyles.js";
 import themes from '../styles/Themes.js';
 
-const color1 = '#fa709a';
-const color2 = '#fee140';
+const {primary, secondary} = themes.colors;
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -16,13 +15,8 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
         height: '100%',
         zIndex: -1,
-        '&:not(dark)': {
-            backgroundImage: `linear-gradient(to right, ${color1} 0%, ${color2} 100%)`
-        },
-        '&.dark': {
-            backgroundImage: `linear-gradient(to right, ${color1} 0%, ${color2} 100%)`,
-            filter: 'brightness(0.7)'
-        },
+        backgroundImage: `linear-gradient(45deg, ${primary} 0%, ${secondary} 100%)`,
+        '&.dark': {filter: 'brightness(0.7)'},
         transition: '0.5s'
     },
 }));

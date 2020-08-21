@@ -23,7 +23,8 @@ const useStyles = makeStyles(theme => ({
     chip: {
         marginRight: theme.spacing(0.5),
         marginBottom: theme.spacing(0.5),
-        color: theme.palette.background.paper
+        color: theme.palette.background.paper,
+        textTransform: 'lowercase'
     },
     mail: {
         color: theme.palette.primary.main,
