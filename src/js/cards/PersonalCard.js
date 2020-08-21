@@ -8,6 +8,8 @@ import CardWrapper from "../components/CardWrapper.js";
 import makeStyles from "@material-ui/core/styles/makeStyles.js";
 import Chip from "@material-ui/core/Chip";
 import Tooltip from "@material-ui/core/Tooltip";
+import {fade} from "@material-ui/core";
+import useTheme from "@material-ui/core/styles/useTheme.js";
 
 const useStyles = makeStyles(theme => ({
     gridHeader: {
@@ -20,7 +22,8 @@ const useStyles = makeStyles(theme => ({
     },
     chip: {
         marginRight: theme.spacing(0.5),
-        marginBottom: theme.spacing(0.5)
+        marginBottom: theme.spacing(0.5),
+        color: theme.palette.background.paper
     },
     mail: {
         color: theme.palette.primary.main,
@@ -47,23 +50,23 @@ const PersonalCard = () => {
                         </GridValue>
                         <GridHeader>Languages</GridHeader>
                         <GridValue>
-                            <GridChip color="primary" label="native">German</GridChip>
-                            <GridChip color="primary" label="fluent">English</GridChip>
-                            <GridChip color="primary" label="fluent">Russian</GridChip>
-                            <GridChip label="basic">French</GridChip>
+                            <GridChip level={3} label="native">German</GridChip>
+                            <GridChip level={3} label="fluent">English</GridChip>
+                            <GridChip level={3} label="fluent">Russian</GridChip>
+                            <GridChip level={2} label="basic">French</GridChip>
                         </GridValue>
                         <GridHeader>Preferred Programming Languages</GridHeader>
                         <GridValue>
-                            <GridChip color="primary" label="React, node">JavaScript</GridChip>
-                            <GridChip color="primary" label=".NET, WinForms, ...">C#</GridChip>
-                            <GridChip color="primary">Python</GridChip>
-                            <GridChip color="primary">Java</GridChip>
+                            <GridChip level={3} label="React, node">JavaScript</GridChip>
+                            <GridChip level={3} label=".NET, WinForms, ...">C#</GridChip>
+                            <GridChip level={3}>Python</GridChip>
+                            <GridChip level={3}>Java</GridChip>
                         </GridValue>
                         <GridHeader>Security Expertise</GridHeader>
                         <GridValue>
-                            <GridChip color="primary">Web</GridChip>
-                            <GridChip>Windows</GridChip>
-                            <GridChip>Linux</GridChip>
+                            <GridChip level={3} label="mostly OWASP top 10">Web</GridChip>
+                            <GridChip level={2}>Windows</GridChip>
+                            <GridChip level={2}>Linux</GridChip>
                         </GridValue>
                     </Grid>
                 </CardContent>
@@ -100,13 +103,25 @@ const Mail = props => {
 
 const GridChip = props => {
     const classes = useStyles();
+    const theme = useTheme();
+
+    let color = theme.palette.primary.main;
+    switch (props.level) {
+        case 1:
+            color = null;
+            break;
+        case 2:
+            color = fade(color, 0.6);
+            break;
+    }
 
     const chip =
         <Chip
             label={props.children}
             size="small"
-            color={props.color}
             className={classes.chip}
+            color="primary"
+            style={{backgroundColor: color}}
         />;
 
     if (props.label) {
