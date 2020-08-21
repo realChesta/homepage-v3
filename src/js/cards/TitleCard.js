@@ -30,7 +30,8 @@ const useStyles = makeStyles(theme => ({
         '&.dark': {
             backgroundColor: theme.palette.background.paper,
             color: theme.palette.primary.main,
-        }
+        },
+        transition: '0.5s'
     },
     cardActions: {
         flexDirection: 'column',
@@ -44,7 +45,8 @@ const useStyles = makeStyles(theme => ({
         },
         '& > :not(first-child)': {
             margin: '0 !important'
-        }
+        },
+        transition: '0.5s'
     },
     cardContent: {
         flexGrow: 1

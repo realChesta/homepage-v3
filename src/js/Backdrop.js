@@ -23,6 +23,7 @@ const useStyles = makeStyles(theme => ({
             backgroundImage: `linear-gradient(to right, ${color1} 0%, ${color2} 100%)`,
             filter: 'brightness(0.7)'
         },
+        transition: '0.5s'
     },
 }));
 

@@ -36,12 +36,14 @@ const useStyles = makeStyles(theme => ({
         justifyContent: 'space-between',
         flexWrap: 'wrap',
         paddingTop: 0,
-        marginLeft: theme.spacing(1)
+        marginLeft: theme.spacing(1),
+        transition: '0.5s'
     },
     iconTextContainer: {
         display: 'flex',
         alignItems: 'center',
-        color: theme.palette.text.secondary
+        color: theme.palette.text.secondary,
+        transition: '0.5s'
     },
     iconTextTypo: {
         marginLeft: theme.spacing(0.5)
@@ -57,7 +59,7 @@ const LinearTimeline = props => {
     let events = props.items.map((item, index) =>
         <TimelineItem key={index}>
             <TimelineOppositeContent className={classes.oppositeContent}>
-                <Typography color="textSecondary">
+                <Typography color="textSecondary" style={{transition: '0.5s'}}>
                     {item.year}
                 </Typography>
             </TimelineOppositeContent>
@@ -110,7 +112,7 @@ export const EventCard = props => {
     const item = props.event;
 
     return (
-        <Card variant="outlined">
+        <Card variant="outlined" style={{transition: '0.5s'}}>
             <CardContent>
                 <Typography color="primary" className={classes.itemTitle}>
                     {item.title}
@@ -120,7 +122,7 @@ export const EventCard = props => {
                 </Typography>
             </CardContent>
             <CardActions className={classes.itemFooter}>
-                <Typography color="textSecondary">
+                <Typography color="textSecondary" style={{transition: '0.5s'}}>
                     {item.duration}
                 </Typography>
                 <div style={{marginLeft: 'auto'}}>

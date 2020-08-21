@@ -6,7 +6,6 @@ import CardContent from "@material-ui/core/CardContent";
 import IconTitle, {IconSubTitle} from "../components/IconTitle.js";
 import Card from "@material-ui/core/Card";
 import LinearTimeline from "../components/LinearTimeline.js";
-import {Divider} from "@material-ui/core";
 import EventList from "../components/EventList.js";
 
 const work = [
@@ -38,7 +37,7 @@ const other = [
 
 const useStyles = makeStyles(theme => ({
   inset: {
-    marginLeft: '1em'
+    margin: '0 1em'
   },
   divider: {
     marginTop: theme.spacing(1),
@@ -50,7 +49,7 @@ const ExperienceCard = props => {
   const classes = useStyles();
   return (
     <CardWrapper>
-      <Card>
+      <Card style={{transition: '0.5s'}}>
         <CardContent>
           <IconTitle icon="work">
             Experience

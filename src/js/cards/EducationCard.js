@@ -41,7 +41,7 @@ const education = [
 const EducationCard = () => {
     return (
         <CardWrapper>
-            <Card>
+            <Card style={{transition: '0.5s'}}>
                 <CardContent>
                     <IconTitle icon="school">
                         Education

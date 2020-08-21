@@ -20,7 +20,8 @@ const useStyles = makeStyles(theme => ({
     },
     chip: {
         marginRight: theme.spacing(0.5),
-        marginBottom: theme.spacing(0.5)
+        marginBottom: theme.spacing(0.5),
+        transition: '0.5s'
     },
     mail: {
         color: theme.palette.primary.main,
@@ -31,7 +32,7 @@ const useStyles = makeStyles(theme => ({
 const PersonalCard = () => {
     return (
         <CardWrapper>
-            <Card>
+            <Card style={{transition: '0.5s'}}>
                 <CardContent>
                     <IconTitle icon="person">
                         Personal Details
