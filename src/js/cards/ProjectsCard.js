@@ -30,7 +30,8 @@ const useStyles = makeStyles(theme => ({
         marginLeft: theme.spacing(1)
     },
     projectTitle: {
-      color: theme.palette.primary.main
+        color: theme.palette.primary.main,
+        fontWeight: 600
     }
 }));
 

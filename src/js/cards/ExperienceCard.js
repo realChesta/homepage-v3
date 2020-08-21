@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ExperienceCard = props => {
+const ExperienceCard = () => {
   const classes = useStyles();
   return (
     <CardWrapper>

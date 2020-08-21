@@ -54,10 +54,16 @@ const PersonalCard = () => {
                         </GridValue>
                         <GridHeader>Preferred Programming Languages</GridHeader>
                         <GridValue>
-                            <GridChip color="primary">JavaScript</GridChip>
-                            <GridChip color="primary">C#</GridChip>
+                            <GridChip color="primary" label="React, node">JavaScript</GridChip>
+                            <GridChip color="primary" label=".NET, WinForms, ...">C#</GridChip>
                             <GridChip color="primary">Python</GridChip>
                             <GridChip color="primary">Java</GridChip>
+                        </GridValue>
+                        <GridHeader>Security Expertise</GridHeader>
+                        <GridValue>
+                            <GridChip color="primary">Web</GridChip>
+                            <GridChip>Linux</GridChip>
+                            <GridChip>Windows</GridChip>
                         </GridValue>
                     </Grid>
                 </CardContent>
