@@ -7,6 +7,16 @@ const typography = {
     ]
 };
 
+const rootTransition = {root: {transition: 'background-color 0.5s, color 0.5s'}};
+const overrides = {
+    MuiPaper: rootTransition,
+    MuiCard: rootTransition,
+    MuiCardActions: rootTransition,
+    MuiChip: rootTransition,
+    MuiTypography: rootTransition,
+    MuiIcon: rootTransition
+};
+
 export const lightTheme = createMuiTheme({
     palette: {
         type: "light",
@@ -17,7 +27,8 @@ export const lightTheme = createMuiTheme({
             main: '#fee140'
         }
     },
-    typography
+    typography,
+    overrides
 });
 
 export const darkTheme = createMuiTheme({
@@ -30,7 +41,8 @@ export const darkTheme = createMuiTheme({
             main: '#fee140'
         }
     },
-    typography
+    typography,
+    overrides
 });
 
 const getCurrentTheme = () => isDarkTheme() ? darkTheme : lightTheme;

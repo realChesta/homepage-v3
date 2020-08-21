@@ -16,7 +16,7 @@ const AchievementsCard = props => {
     const classes = useStyles();
     return (
         <CardWrapper>
-            <Card style={{transition: '0.5s'}}>
+            <Card>
                 <CardContent>
                    <IconTitle icon="star">Achievements and Awards</IconTitle>
                     <div className={classes.inset}>

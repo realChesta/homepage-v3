@@ -30,8 +30,7 @@ const useStyles = makeStyles(theme => ({
         '&.dark': {
             backgroundColor: theme.palette.background.paper,
             color: theme.palette.primary.main,
-        },
-        transition: '0.5s'
+        }
     },
     cardActions: {
         flexDirection: 'column',
@@ -45,17 +44,18 @@ const useStyles = makeStyles(theme => ({
         },
         '& > :not(first-child)': {
             margin: '0 !important'
-        },
-        transition: '0.5s'
+        }
     },
     cardContent: {
         flexGrow: 1
     },
     helloTypo: {
         fontWeight: 300,
+        transition: '0s'
     },
     titleText: {
-        fontWeight: 400
+        fontWeight: 400,
+        transition: '0s'
     }
 }));
 

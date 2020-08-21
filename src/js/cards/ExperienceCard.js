@@ -49,7 +49,7 @@ const ExperienceCard = props => {
   const classes = useStyles();
   return (
     <CardWrapper>
-      <Card style={{transition: '0.5s'}}>
+      <Card>
         <CardContent>
           <IconTitle icon="work">
             Experience

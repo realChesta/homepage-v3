@@ -36,14 +36,12 @@ const useStyles = makeStyles(theme => ({
         justifyContent: 'space-between',
         flexWrap: 'wrap',
         paddingTop: 0,
-        marginLeft: theme.spacing(1),
-        transition: '0.5s'
+        marginLeft: theme.spacing(1)
     },
     iconTextContainer: {
         display: 'flex',
         alignItems: 'center',
-        color: theme.palette.text.secondary,
-        transition: '0.5s'
+        color: theme.palette.text.secondary
     },
     iconTextTypo: {
         marginLeft: theme.spacing(0.5)
@@ -59,7 +57,7 @@ const LinearTimeline = props => {
     let events = props.items.map((item, index) =>
         <TimelineItem key={index}>
             <TimelineOppositeContent className={classes.oppositeContent}>
-                <Typography color="textSecondary" style={{transition: '0.5s'}}>
+                <Typography color="textSecondary">
                     {item.year}
                 </Typography>
             </TimelineOppositeContent>
@@ -112,17 +110,17 @@ export const EventCard = props => {
     const item = props.event;
 
     return (
-        <Card variant="outlined" style={{transition: '0.5s'}}>
+        <Card variant="outlined">
             <CardContent>
                 <Typography color="primary" className={classes.itemTitle}>
                     {item.title}
                 </Typography>
-                <Typography className={classes.itemDescription}>
+                <Typography className={classes.itemDescription} style={{ transition: '0s'}}>
                     {item.description}
                 </Typography>
             </CardContent>
             <CardActions className={classes.itemFooter}>
-                <Typography color="textSecondary" style={{transition: '0.5s'}}>
+                <Typography color="textSecondary">
                     {item.duration}
                 </Typography>
                 <div style={{marginLeft: 'auto'}}>
@@ -140,7 +138,7 @@ const Now = () => {
     return (
         <TimelineItem>
             <TimelineOppositeContent className={classes.oppositeContent}>
-                <Typography>
+                <Typography style={{ transition: '0s'}}>
                     now
                 </Typography>
             </TimelineOppositeContent>
@@ -149,7 +147,9 @@ const Now = () => {
                 <TimelineConnector/>
             </TimelineSeparator>
             <TimelineContent>
-                <Typography>{moment().format("MMMM YYYY")}</Typography>
+                <Typography style={{ transition: '0s'}}>
+                    {moment().format("MMMM YYYY")}
+                </Typography>
             </TimelineContent>
         </TimelineItem>
     );

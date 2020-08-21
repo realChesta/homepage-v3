@@ -10,8 +10,7 @@ const useStyles = makeStyles(theme => ({
         alignItems: 'center',
         fontSize: '1.5em',
         marginBottom: '1em',
-        color: theme.palette.primary.main,
-        transition: '0.5s'
+        color: theme.palette.primary.main
     },
     title: {
         marginLeft: '0.25em',
@@ -22,8 +21,7 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         alignItems: 'center',
         fontSize: '1.2em',
-        color: theme.palette.text.secondary,
-        transition: '0.5s'
+        color: theme.palette.text.secondary
     }
 }));
 
