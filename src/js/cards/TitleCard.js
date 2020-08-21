@@ -51,7 +51,8 @@ const useStyles = makeStyles(theme => ({
     },
     helloTypo: {
         fontWeight: 300,
-        transition: '0s'
+        transition: '0s',
+        marginBottom: '0.2em'
     },
     titleText: {
         fontWeight: 400,
