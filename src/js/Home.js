@@ -12,6 +12,7 @@ import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import themes from "../styles/Themes.js";
 import AchievementsCard from "./cards/AchievementsCard.js";
+import ProjectsCard from "./cards/ProjectsCard.js";
 
 const useStyles = makeStyles(theme => ({
     outerContainer: {
@@ -66,6 +67,7 @@ const Home = () => {
                     <PersonalCard/>
                     <EducationCard/>
                     <ExperienceCard/>
+                    <ProjectsCard/>
                     <AchievementsCard/>
                 </Masonry>
             </div>

@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     aTitleContainer: {
         display: 'flex',
         justifyContent: 'space-between',
-        marginBottom: '0.5em'
+        marginBottom: '0.25em'
     },
     aTitle: {
         maxWidth: '70%',
@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const AchievementsCard = props => {
+const AchievementsCard = () => {
     const classes = useStyles();
 
     return (

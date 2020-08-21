@@ -14,7 +14,8 @@ const overrides = {
     MuiCardActions: rootTransition,
     MuiChip: rootTransition,
     MuiTypography: rootTransition,
-    MuiIcon: rootTransition
+    MuiIcon: rootTransition,
+    MuiListItemText: {primary: {transition: '0s'}}
 };
 
 export const lightTheme = createMuiTheme({
