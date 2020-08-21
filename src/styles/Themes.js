@@ -24,7 +24,7 @@ export const lightTheme = createMuiTheme({
             main: '#cc667c'
         },
         secondary: {
-            main: '#fee140'
+            main: '#fa0'
         }
     },
     typography,
