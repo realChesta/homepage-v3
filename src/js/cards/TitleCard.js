@@ -56,7 +56,13 @@ const useStyles = makeStyles(theme => ({
     },
     titleText: {
         fontWeight: 400,
-        transition: '0s'
+        transition: '0.5s',
+        '&:not(dark)': {
+          color: theme.palette.background.paper
+        },
+        '&.dark': {
+            color: theme.palette.text.primary
+        }
     }
 }));
 
@@ -65,10 +71,12 @@ const TitleCard = () => {
 
     let cardRootClass = classes.cardRoot;
     let cardActionsClass = classes.cardActions;
+    let textClass = classes.titleText;
 
     if (themes.isDarkTheme()) {
         cardRootClass += ' dark';
         cardActionsClass += ' dark';
+        textClass += ' dark';
     }
 
     return (
@@ -78,7 +86,7 @@ const TitleCard = () => {
                     <Typography variant="h2" className={classes.helloTypo}>
                         Hello!
                     </Typography>
-                    <Typography className={classes.titleText}>
+                    <Typography className={textClass}>
                         I'm Kyrill, a {getMyAge()} year old third year
                         informatics student at the University of Zurich.
                     </Typography>
