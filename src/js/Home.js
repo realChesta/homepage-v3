@@ -16,12 +16,11 @@ import ProjectsCard from "./cards/ProjectsCard.js";
 
 const useStyles = makeStyles(theme => ({
     outerContainer: {
-        width: '100vw',
-        height: '100vh',
+        width: '100%',
+        height: '100%',
         display: 'flex',
         alignItems: 'flex-start',
-        justifyContent: 'center',
-        overflow: 'auto'
+        justifyContent: 'center'
     },
     innerContainer: {
         marginTop: theme.spacing(1),
