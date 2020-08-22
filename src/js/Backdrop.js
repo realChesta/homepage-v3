@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import makeStyles from "@material-ui/core/styles/makeStyles.js";
 import themes from '../styles/Themes.js';
 
-const {primary, secondary} = themes.colors;
+const {primary, secondary} = themes.backdrop;
 
 const useStyles = makeStyles(theme => ({
     root: {
+        position: 'relative',
         width: '100%',
         height: '100%'
     },

@@ -14,11 +14,14 @@ const overrides = {
     MuiChip: rootTransition,
     MuiTypography: rootTransition,
     MuiIcon: rootTransition,
-    MuiListItemText: {primary: {transition: '0s'}}
+    MuiListItemText: {primary: {transition: '0s'}},
+    MuiTimeline: {root: {paddingLeft: 0, paddingRight: 0}}
 };
 
-const primary = '#ff9393';
-const secondary = '#e2cc95';
+const backdrop = {
+    primary: '#ff9393',
+    secondary: '#e2cc95'
+};
 
 export const lightTheme = createMuiTheme({
     palette: {
@@ -68,5 +71,5 @@ export default {
     isDarkTheme,
     setDarkTheme,
     onThemeChange,
-    colors: {primary, secondary}
+    backdrop
 }
