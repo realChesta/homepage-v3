@@ -84,11 +84,12 @@ const TitleCard = () => {
             <Card className={cardRootClass}>
                 <CardContent className={classes.cardContent}>
                     <Typography variant="h2" className={classes.helloTypo}>
-                        Hello!
+                        Hey there!
                     </Typography>
                     <Typography className={textClass}>
                         I'm Kyrill, a {getMyAge()} year old third year
                         informatics student at the University of Zurich.
+                        My biggest interest is in all things itsec.
                     </Typography>
                 </CardContent>
                 <CardActions className={cardActionsClass}>
