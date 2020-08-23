@@ -15,6 +15,7 @@ import SvgIcon from "@material-ui/core/SvgIcon";
 import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import {Public} from "@material-ui/icons";
+import useTheme from "@material-ui/core/styles/useTheme.js";
 
 const useStyles = makeStyles(theme => ({
     projectRoot: {
@@ -36,16 +37,20 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const ProjectsCard = () => {
+    const theme = useTheme();
     return (
         <CardWrapper>
             <Card>
-                <CardContent>
+                <CardContent style={{paddingBottom: theme.spacing(1)}}>
                     <IconTitle icon="layers">Some of my Personal Projects</IconTitle>
-                    <Typography style={{transition: '0s'}}>
+                    <Typography style={{
+                        transition: '0s',
+                        paddingLeft: theme.spacing(2),
+                        paddingRight: theme.spacing(2)
+                    }}>
                         This is a selection of a few personal projects I've worked on.
                         You can find more on my GitHub (see top).
                     </Typography>
-                    <br/>
                     <List>
                         <Project
                             title="SoNNic"
@@ -55,7 +60,7 @@ const ProjectsCard = () => {
                         />
                         <Project
                             title="Frantic"
-                            description="An online implementation of the swiss card game Frantic (similar to UNO), created in a team of 5 for a university project."
+                            description="An online implementation of the swiss card game Frantic (similar to UNO) with a front-end built from scratch using react.js and react-spring. Created in a team of 5 for a university project."
                             github="https://github.com/soprafs20-group09/frantic-client"
                             site="http://frantic.online"
                         />
