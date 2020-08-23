@@ -54,19 +54,21 @@ const ProjectsCard = () => {
                             site="https://khux.ch/mng/sonnic"
                         />
                         <Project
-                            title="Window Mirror"
-                            description="A small tool written in C#.NET that creates readonly copies of existing windows, making presentations of selected windows easy."
-                            github="https://github.com/realChesta/window-mirror"
+                            title="Frantic"
+                            description="An online implementation of the swiss card game Frantic (similar to UNO), created in a team of 5 for a university project."
+                            github="https://github.com/soprafs20-group09/frantic-client"
+                            site="http://frantic.online"
+                        />
+                        <Project
+                            title="Plymouth-Pokemon"
+                            description="A shell script that generates a Plymouth theme showing a randomly chosen Pokemon jumping until the boot process is finished. It allows you to enjoy a new Pokemon on every boot!"
+                            github="https://github.com/realChesta/plymouth-pokemon"
                         />
                         <Project
                             title="SyncPad"
                             description="An online text editor written using react.js with real-time collaboration, allowing multiple users to work on the same file simultaneously."
                             github="https://github.com/realChesta/syncpad"
                         />
-                        <Project
-                            title="Hedgeshock"
-                            description="A python script that uses machine learning to detect hedgehogs (or other animals) trying to steal food."
-                            github="https://github.com/realChesta/hedgeshock"/>
                     </List>
                 </CardContent>
             </Card>
@@ -93,7 +95,7 @@ const Project = props => {
             />
             <div className={classes.projectActionContainer}>
                 {props.site &&
-                <Tooltip title="Visit this Project">
+                <Tooltip title="Visit Project Site">
                     <IconButton
                         target="_blank"
                         href={props.site}
