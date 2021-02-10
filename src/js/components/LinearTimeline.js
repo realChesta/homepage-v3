@@ -9,11 +9,13 @@ import TimelineDot from "@material-ui/lab/TimelineDot";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import {Typography} from "@material-ui/core";
 import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
 import TimelineConnector from "@material-ui/lab/TimelineConnector";
 import moment from "moment";
 import CardActions from "@material-ui/core/CardActions";
 import Icon from "@material-ui/core/Icon";
+import Accordion from "@material-ui/core/Accordion";
+import AccordionSummary from "@material-ui/core/AccordionSummary";
+import AccordionDetails from "@material-ui/core/AccordionDetails";
 
 const useStyles = makeStyles(theme => ({
     oppositeContent: {
@@ -42,6 +44,9 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         alignItems: 'center',
         color: theme.palette.text.secondary
+    },
+    itemExpandSummary: {
+      alignItems: 'flex-start'
     },
     iconTextTypo: {
         marginLeft: theme.spacing(0.5)
@@ -109,16 +114,33 @@ export const EventCard = props => {
     const classes = useStyles();
     const item = props.event;
 
+    const expandIcon = item.details ? <Icon className="material-icons-round">expand_more</Icon> : null;
+    const expandProps = item.details ? {} : {expanded: false, style: {cursor: 'default'}};
+
     return (
         <Card variant="outlined">
-            <CardContent>
-                <Typography color="primary" className={classes.itemTitle}>
-                    {item.title}
-                </Typography>
-                <Typography className={classes.itemDescription} style={{ transition: '0s'}}>
-                    {item.description}
-                </Typography>
-            </CardContent>
+            <Accordion
+                elevation={0}
+                {...expandProps}
+            >
+                <AccordionSummary
+                    expandIcon={expandIcon}
+                    className={classes.itemExpandSummary}
+                    {...expandProps}
+                >
+                    <div>
+                        <Typography color="primary" className={classes.itemTitle}>
+                            {item.title}
+                        </Typography>
+                        <Typography className={classes.itemDescription} style={{transition: '0s'}}>
+                            {item.description}
+                        </Typography>
+                    </div>
+                </AccordionSummary>
+                <AccordionDetails>
+                    {item.details}
+                </AccordionDetails>
+            </Accordion>
             <CardActions className={classes.itemFooter}>
                 <Typography color="textSecondary">
                     {item.duration}
@@ -138,7 +160,7 @@ const Now = () => {
     return (
         <TimelineItem>
             <TimelineOppositeContent className={classes.oppositeContent}>
-                <Typography style={{ transition: '0s'}}>
+                <Typography style={{transition: '0s'}}>
                     now
                 </Typography>
             </TimelineOppositeContent>
@@ -147,7 +169,7 @@ const Now = () => {
                 <TimelineConnector/>
             </TimelineSeparator>
             <TimelineContent>
-                <Typography style={{ transition: '0s'}}>
+                <Typography style={{transition: '0s'}}>
                     {moment().format("MMMM YYYY")}
                 </Typography>
             </TimelineContent>
