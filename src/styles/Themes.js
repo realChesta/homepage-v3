@@ -15,7 +15,17 @@ const overrides = {
     MuiTypography: rootTransition,
     MuiIcon: rootTransition,
     MuiListItemText: {primary: {transition: '0s'}},
-    MuiTimeline: {root: {paddingLeft: 0, paddingRight: 0}}
+    MuiTimeline: {root: {paddingLeft: 0, paddingRight: 0}},
+    MuiAccordion: rootTransition,
+    MuiAccordionSummary: {
+        root: {alignItems: 'flex-start'},
+        content: {
+            "&$expanded": {
+                margin: "20px 0 8px"
+            }
+        }
+    },
+    MuiAccordionDetails: {root: {padding: '0 16px'}}
 };
 
 const backdrop = {

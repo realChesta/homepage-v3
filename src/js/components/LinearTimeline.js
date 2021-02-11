@@ -17,6 +17,7 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import RoundIcon from "./RoundIcon.js";
+import LineIcon from "./LineIcon.js";
 
 const useStyles = makeStyles(theme => ({
     oppositeContent: {
@@ -45,9 +46,6 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         alignItems: 'center',
         color: theme.palette.text.secondary
-    },
-    itemExpandSummary: {
-      alignItems: 'flex-start'
     },
     iconTextTypo: {
         marginLeft: theme.spacing(0.5)
@@ -103,7 +101,7 @@ const IconText = props => {
     const classes = useStyles();
     return (
         <div className={classes.iconTextContainer}>
-            <Icon color="inherit" className="material-icons-outlined">{props.icon}</Icon>
+            <LineIcon color="inherit">{props.icon}</LineIcon>
             <Typography color="inherit" className={classes.iconTextTypo}>
                 {props.children}
             </Typography>
@@ -126,7 +124,6 @@ export const EventCard = props => {
             >
                 <AccordionSummary
                     expandIcon={expandIcon}
-                    className={classes.itemExpandSummary}
                     {...expandProps}
                 >
                     <div>
