@@ -10,7 +10,8 @@ import makeStyles from "@material-ui/core/styles/makeStyles.js";
 
 const useStyles = makeStyles(theme => ({
     chip: {
-        marginRight: theme.spacing(0.5)
+        marginRight: theme.spacing(0.5),
+        marginBottom: theme.spacing(0.5)
     },
     bulletListItem: {
         width: '2em',
