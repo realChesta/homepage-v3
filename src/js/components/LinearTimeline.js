@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import makeStyles from "@material-ui/core/styles/makeStyles.js";
 import Timeline from "@material-ui/lab/Timeline";
@@ -18,6 +18,7 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import RoundIcon from "./RoundIcon.js";
 import LineIcon from "./LineIcon.js";
+import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles(theme => ({
     oppositeContent: {
@@ -30,7 +31,24 @@ const useStyles = makeStyles(theme => ({
     itemTitle: {
         fontWeight: 600,
         lineHeight: '1em',
-        marginBottom: '0.2em'
+        marginBottom: '0.2em',
+        flexGrow: 1,
+        alignSelf: 'flex-end'
+    },
+    itemTitleContainer: {
+        display: 'flex',
+        width: '100%'
+    },
+    itemExpandIcon: {
+        marginTop: -theme.spacing(1),
+        marginRight: -theme.spacing(0.4),
+        padding: 0,
+        transition: theme.transitions.create('transform', {
+            duration: theme.transitions.duration.shortest,
+        }),
+        '&.expanded': {
+            transform: 'rotate(180deg)',
+        }
     },
     itemDescription: {
         lineHeight: '1.1em',
@@ -111,25 +129,45 @@ const IconText = props => {
 
 export const EventCard = props => {
     const classes = useStyles();
+    const [expanded, setExpanded] = useState(false);
     const item = props.event;
 
-    const expandIcon = item.details ? <RoundIcon>expand_more</RoundIcon> : null;
-    const expandProps = item.details ? {} : {expanded: false, style: {cursor: 'default'}};
+    const expandProps = item.details ? {} : {style: {cursor: 'default'}};
+
+    const handleExpandClick = () => {
+        if (item.details) {
+            setExpanded(!expanded);
+        }
+    }
 
     return (
         <Card variant="outlined">
             <Accordion
                 elevation={0}
                 {...expandProps}
+                expanded={expanded}
             >
                 <AccordionSummary
-                    expandIcon={expandIcon}
                     {...expandProps}
+                    onClick={() => handleExpandClick()}
                 >
-                    <div>
-                        <Typography color="primary" className={classes.itemTitle}>
-                            {item.title}
-                        </Typography>
+                    <div style={{width: '100%'}}>
+                        <div className={classes.itemTitleContainer}>
+                            <Typography color="primary" className={classes.itemTitle}>
+                                {item.title}
+                            </Typography>
+                            {!!item.details &&
+                                <IconButton
+                                    edge="end"
+                                    component="div"
+                                    tabIndex={null}
+                                    role={null}
+                                    className={`${classes.itemExpandIcon} ${expanded && 'expanded'}`}
+                                >
+                                    <RoundIcon>expand_more</RoundIcon>
+                                </IconButton>
+                            }
+                        </div>
                         <Typography className={classes.itemDescription} style={{transition: '0s'}}>
                             {item.description}
                         </Typography>
