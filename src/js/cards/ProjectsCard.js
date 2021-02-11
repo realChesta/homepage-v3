@@ -14,8 +14,8 @@ import GithubIcon from '../../img/github.svg';
 import SvgIcon from "@material-ui/core/SvgIcon";
 import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
-import {Public} from "@material-ui/icons";
 import useTheme from "@material-ui/core/styles/useTheme.js";
+import RoundIcon from "../components/RoundIcon.js";
 
 const useStyles = makeStyles(theme => ({
     projectRoot: {
@@ -106,7 +106,7 @@ const Project = props => {
                         href={props.site}
                         color="primary"
                     >
-                        <Public/>
+                        <RoundIcon>public</RoundIcon>
                     </IconButton>
                 </Tooltip>}
                 {props.github &&

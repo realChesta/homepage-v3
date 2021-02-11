@@ -1,8 +1,8 @@
 import React from 'react';
 import makeStyles from "@material-ui/core/styles/makeStyles.js";
-import Icon from "@material-ui/core/Icon";
 import PropTypes from 'prop-types';
 import Typography from "@material-ui/core/Typography";
+import RoundIcon from "./RoundIcon.js";
 
 const useStyles = makeStyles(theme => ({
     container: {
@@ -29,9 +29,9 @@ const IconTitle = props => {
     const classes = useStyles();
     return (
         <div className={classes.container}>
-            <Icon style={{fontSize: 'inherit'}} className="material-icons-round">
+            <RoundIcon style={{fontSize: 'inherit'}}>
                 {props.icon}
-            </Icon>
+            </RoundIcon>
             <Typography color="inherit" className={classes.title}>
                 {props.children}
             </Typography>
@@ -47,9 +47,9 @@ export const IconSubTitle = props => {
     const classes = useStyles();
     return (
         <div className={classes.containerSub}>
-            <Icon style={{fontSize: 'inherit'}} className="material-icons-round">
+            <RoundIcon style={{fontSize: 'inherit'}}>
                 {props.icon}
-            </Icon>
+            </RoundIcon>
             <Typography color="inherit" className={classes.title}>
                 {props.children}
             </Typography>

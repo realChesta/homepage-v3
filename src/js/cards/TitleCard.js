@@ -10,12 +10,12 @@ import SonnicIcon from '../../img/sonnic.svg';
 import GithubIcon from '../../img/github.svg';
 import RocketLeagueIcon from '../../img/rocket-league.svg';
 import SvgIcon from "@material-ui/core/SvgIcon";
-import MailIcon from '@material-ui/icons/Mail';
 import Tooltip from "@material-ui/core/Tooltip";
 import Card from "@material-ui/core/Card";
 import CardWrapper from "../components/CardWrapper.js";
 import makeStyles from "@material-ui/core/styles/makeStyles.js";
 import themes from "../../styles/Themes.js";
+import RoundIcon from "../components/RoundIcon.js";
 
 const useStyles = makeStyles(theme => ({
     cardRoot: {
@@ -102,7 +102,7 @@ const TitleCard = () => {
                     </Tooltip>
                     <Tooltip title="Shoot me an E-Mail!" placement="right">
                         <IconButton target="_blank" href="mailto:kyrill.hux@gmail.com" color="inherit">
-                            <MailIcon/>
+                            <RoundIcon>mail</RoundIcon>
                         </IconButton>
                     </Tooltip>
                     <Tooltip title='Matura Paper "SoNNic"' placement="right">

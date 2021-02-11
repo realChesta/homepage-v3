@@ -16,6 +16,7 @@ import Icon from "@material-ui/core/Icon";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
+import RoundIcon from "./RoundIcon.js";
 
 const useStyles = makeStyles(theme => ({
     oppositeContent: {
@@ -114,7 +115,7 @@ export const EventCard = props => {
     const classes = useStyles();
     const item = props.event;
 
-    const expandIcon = item.details ? <Icon className="material-icons-round">expand_more</Icon> : null;
+    const expandIcon = item.details ? <RoundIcon>expand_more</RoundIcon> : null;
     const expandProps = item.details ? {} : {expanded: false, style: {cursor: 'default'}};
 
     return (
