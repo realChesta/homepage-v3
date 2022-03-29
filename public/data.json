@@ -1,0 +1,184 @@
+{
+  "education": [
+    {
+      "year": 2008,
+      "title": "iDSP",
+      "location": "Paris, FR",
+      "description": "internationale Deutsche Schule Paris",
+      "duration": "2008 - 2014"
+    },
+    {
+      "year": 2014,
+      "title": "MNG Rämibühl",
+      "location": "Zürich, CH",
+      "description": "Swiss Matura",
+      "duration": "2014 - 2017"
+    },
+    {
+      "year": 2017,
+      "title": "ETH Zürich",
+      "location": "Zürich, CH",
+      "description": "2 semesters Bsc Inf",
+      "duration": "2017 - 2018"
+    },
+    {
+      "year": 2018,
+      "title": "University of Zürich",
+      "location": "Zürich, CH",
+      "description": "Bachelor of Science in Informatics\nExpected graduation in 2022",
+      "duration": "2018 - present"
+    }
+  ],
+  "experience": {
+    "work": [
+      {
+        "year": 2019,
+        "title": "Triboni AG",
+        "location": "Zürich, CH",
+        "description": "Software Engineer\n40%",
+        "duration": "Aug. 2019 - Jul. 2020",
+        "details": {
+          "type": "bullet-list",
+          "data": [
+            {
+              "text": "frontend development",
+              "icon": "language",
+              "tags": [
+                "react.js"
+              ]
+            },
+            {
+              "text": "backend development",
+              "icon": "dns",
+              "tags": [
+                "java",
+                ".net"
+              ]
+            },
+            {
+              "text": "reverse engineering",
+              "icon": "build"
+            }
+          ]
+        }
+      },
+      {
+        "year": 2020,
+        "title": "SEC Consult (Schweiz) AG",
+        "location": "Zürich, CH",
+        "description": "Associate Security Consultant (Intern)\n100%",
+        "duration": "Jul. 2020 - Sept. 2020",
+        "details": {
+          "type": "bullet-list",
+          "data": [
+            {
+              "text": "revamp of reporting tool",
+              "icon": "code",
+              "tags": [
+                "react.js",
+                "node.js",
+                "docker",
+                "mongo"
+              ]
+            },
+            {
+              "text": "penetration testing",
+              "icon": "bug_report",
+              "tags": [
+                "web",
+                "owasp"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "year": 2020,
+        "title": "SEC Consult (Schweiz) AG",
+        "location": "Zürich, CH",
+        "description": "Security Consultant \n40%",
+        "duration": "Oct. 2020 - present",
+        "details": {
+          "type": "bullet-list",
+          "data": [
+            {
+              "text": "penetration testing",
+              "icon": "bug_report",
+              "tags": [
+                "web",
+                "owasp"
+              ]
+            },
+            {
+              "text": "reporting tool development",
+              "icon": "code",
+              "tags": [
+                "react.js",
+                "node.js",
+                "docker",
+                "mongo"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "other": [
+      {
+        "year": 2019,
+        "title": "University of Zürich",
+        "location": "Zürich, CH",
+        "description": "Informatics I Tutor",
+        "duration": "Sep. 2019 - Dez. 2019"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "SoNNic",
+      "description": "A machine learning algorithm that autonomously learns to play the first level of Sonic the Hedgehog using neuroevolution.",
+      "github": "https://github.com/realChesta/SoNNic",
+      "site": "https://khux.ch/mng/sonnic"
+    },
+    {
+      "title": "Frantic",
+      "description": "An online implementation of the swiss card game Frantic (similar to UNO) with a front-end built from scratch using react.js and react-spring. Created in a team of 5 for a university project.",
+      "github": "https://github.com/soprafs20-group09/frantic-client",
+      "site": "http://frantic.online"
+    },
+    {
+      "title": "Plymouth-Pokemon",
+      "description": "A shell script that generates a Plymouth theme showing a randomly chosen Pokemon jumping until the boot process is finished. It allows you to enjoy a new Pokemon on every boot!",
+      "github": "https://github.com/realChesta/plymouth-pokemon"
+    },
+    {
+      "title": "SyncPad",
+      "description": "An online text editor written using react.js with real-time collaboration, allowing multiple users to work on the same file simultaneously.",
+      "github": "https://github.com/realChesta/syncpad"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Coding Competitions",
+      "icon": "code",
+      "items": [
+        {
+          "title": "Google Hash Code 2018",
+          "description": "in a team of four",
+          "extra": "placed 81 / 4856"
+        }
+      ]
+    },
+    {
+      "title": "Awards",
+      "icon": "stars",
+      "items": [
+        {
+          "title": "Niklaus Wirth Young Talent Computer Science Award",
+          "description": "for matura paper 'SoNNic'",
+          "extra": "2017"
+        }
+      ]
+    }
+  ]
+}

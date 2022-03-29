@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import PropTypes from 'prop-types';
 import makeStyles from "@material-ui/core/styles/makeStyles.js";
 import TitleCard from "./cards/TitleCard.js";
@@ -13,6 +13,7 @@ import Brightness7Icon from '@material-ui/icons/Brightness7';
 import themes from "../styles/Themes.js";
 import AchievementsCard from "./cards/AchievementsCard.js";
 import ProjectsCard from "./cards/ProjectsCard.js";
+import {CircularProgress} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     outerContainer: {
@@ -20,6 +21,13 @@ const useStyles = makeStyles(theme => ({
         height: '100%',
         display: 'flex',
         alignItems: 'flex-start',
+        justifyContent: 'center'
+    },
+    outerContainerLoading: {
+        width: '100vw',
+        height: '100vh',
+        display: 'flex',
+        alignItems: 'center',
         justifyContent: 'center'
     },
     innerContainer: {
@@ -49,26 +57,38 @@ const breakpoints = {
 
 const Home = () => {
     const classes = useStyles();
+    const [data, setData] = useState(null);
 
     const getThemeIcon = () => themes.isDarkTheme() ?
         <Brightness7Icon className={classes.themeIcon}/> :
         <Brightness4Icon className={classes.themeIcon}/>;
 
+    const loadData = async () => {
+        const res = await fetch('./data.json');
+        const d = await res.json();
+        setData(d);
+    }
+
+    useEffect( () => {
+        loadData();
+    }, []);
+
     return (
         <Backdrop>
-            <div className={classes.outerContainer}>
-                <Masonry
+            <div className={data ? classes.outerContainer : classes.outerContainerLoading}>
+                {data ? <Masonry
                     className={classes.innerContainer}
                     columnClassName={classes.column}
                     breakpointCols={breakpoints}
                 >
                     <TitleCard/>
                     <PersonalCard/>
-                    <EducationCard/>
-                    <ExperienceCard/>
-                    <ProjectsCard/>
-                    <AchievementsCard/>
-                </Masonry>
+                    <EducationCard education={data.education}/>
+                    <ExperienceCard experience={data.experience}/>
+                    <ProjectsCard projects={data.projects}/>
+                    <AchievementsCard achievements={data.achievements}/>
+                </Masonry> : <CircularProgress variant="indeterminate"/>
+                }
             </div>
             <Fab
                 color="primary"

@@ -35,8 +35,26 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const AchievementsCard = () => {
+const AchievementsCard = props => {
     const classes = useStyles();
+
+    const items = [];
+
+    for (let a of props.achievements) {
+        items.push(
+            <IconSubTitle icon={a.icon}>{a.title}</IconSubTitle>
+        );
+        for (let i of a.items) {
+            items.push(
+                <Achievement
+                    title={i.title}
+                    description={i.description}
+                    extra={i.extra}
+                />
+            );
+        }
+        items.push(<br/>);
+    }
 
     return (
         <CardWrapper>
@@ -44,19 +62,7 @@ const AchievementsCard = () => {
                 <CardContent>
                     <IconTitle icon="star">Achievements and Awards</IconTitle>
                     <div className={classes.inset}>
-                        <IconSubTitle icon="code">Coding Competitions</IconSubTitle>
-                        <Achievement
-                            title="Google Hash Code 2018"
-                            description="in a team of four"
-                            extra="placed 81 / 4856"
-                        />
-                        <br/>
-                        <IconSubTitle icon="stars">Awards</IconSubTitle>
-                        <Achievement
-                            title="Niklaus Wirth Young Talent Computer Science Award"
-                            description="for matura paper 'SoNNic'"
-                            extra="2017"
-                        />
+                        {items}
                     </div>
                 </CardContent>
             </Card>
@@ -64,7 +70,9 @@ const AchievementsCard = () => {
     );
 };
 
-AchievementsCard.propTypes = {};
+AchievementsCard.propTypes = {
+    achievements: PropTypes.object
+};
 
 const Achievement = props => {
     const classes = useStyles();

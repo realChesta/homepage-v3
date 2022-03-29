@@ -36,8 +36,17 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const ProjectsCard = () => {
+const ProjectsCard = props => {
     const theme = useTheme();
+    const items = props.projects.map(p =>
+        <Project
+            title={p.title}
+            description={p.description}
+            github={p.github}
+            site={p.site}
+        />
+    );
+
     return (
         <CardWrapper>
             <Card>
@@ -52,28 +61,7 @@ const ProjectsCard = () => {
                         You can find more on my GitHub (see top).
                     </Typography>
                     <List>
-                        <Project
-                            title="SoNNic"
-                            description="A machine learning algorithm that autonomously learns to play the first level of Sonic the Hedgehog using neuroevolution."
-                            github="https://github.com/realChesta/SoNNic"
-                            site="https://khux.ch/mng/sonnic"
-                        />
-                        <Project
-                            title="Frantic"
-                            description="An online implementation of the swiss card game Frantic (similar to UNO) with a front-end built from scratch using react.js and react-spring. Created in a team of 5 for a university project."
-                            github="https://github.com/soprafs20-group09/frantic-client"
-                            site="http://frantic.online"
-                        />
-                        <Project
-                            title="Plymouth-Pokemon"
-                            description="A shell script that generates a Plymouth theme showing a randomly chosen Pokemon jumping until the boot process is finished. It allows you to enjoy a new Pokemon on every boot!"
-                            github="https://github.com/realChesta/plymouth-pokemon"
-                        />
-                        <Project
-                            title="SyncPad"
-                            description="An online text editor written using react.js with real-time collaboration, allowing multiple users to work on the same file simultaneously."
-                            github="https://github.com/realChesta/syncpad"
-                        />
+                        {items}
                     </List>
                 </CardContent>
             </Card>
@@ -81,7 +69,9 @@ const ProjectsCard = () => {
     );
 };
 
-ProjectsCard.propTypes = {};
+ProjectsCard.propTypes = {
+    projects: PropTypes.object
+};
 
 const Github = () => (
     <SvgIcon>

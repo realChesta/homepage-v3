@@ -19,6 +19,7 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import RoundIcon from "./RoundIcon.js";
 import LineIcon from "./LineIcon.js";
 import IconButton from "@material-ui/core/IconButton";
+import BulletList from "./BulletList";
 
 const useStyles = makeStyles(theme => ({
     oppositeContent: {
@@ -131,12 +132,21 @@ export const EventCard = props => {
     const classes = useStyles();
     const [expanded, setExpanded] = useState(false);
     const item = props.event;
+    let details;
 
     const expandProps = item.details ? {} : {style: {cursor: 'default'}};
 
     const handleExpandClick = () => {
         if (item.details) {
             setExpanded(!expanded);
+        }
+    }
+
+    if (item.details) {
+        switch (item.details.type) {
+            case "bullet-list":
+                details = <BulletList>{item.details.data}</BulletList>;
+                break;
         }
     }
 
@@ -174,7 +184,7 @@ export const EventCard = props => {
                     </div>
                 </AccordionSummary>
                 <AccordionDetails>
-                    {item.details}
+                    {details}
                 </AccordionDetails>
             </Accordion>
             <CardActions className={classes.itemFooter}>
