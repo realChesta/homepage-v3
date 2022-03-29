@@ -20,7 +20,7 @@ const EventList = props => {
     let events = props.items.map((item, index) => {
         return (
             <div className={classes.item} key={index}>
-                <EventCard event={item}/>
+                <EventCard event={item} duration={props.duration}/>
             </div>
         );
     });
@@ -33,7 +33,8 @@ const EventList = props => {
 };
 
 EventList.propTypes = {
-    items: PropTypes.array.isRequired
+    items: PropTypes.array.isRequired,
+    duration: PropTypes.bool
 };
 
 export default EventList;

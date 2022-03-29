@@ -5,28 +5,28 @@
       "title": "iDSP",
       "location": "Paris, FR",
       "description": "internationale Deutsche Schule Paris",
-      "duration": "2008 - 2014"
+      "duration": [2008, 2014]
     },
     {
       "year": 2014,
       "title": "MNG Rämibühl",
       "location": "Zürich, CH",
       "description": "Swiss Matura",
-      "duration": "2014 - 2017"
+      "duration": [2014, 2017]
     },
     {
       "year": 2017,
       "title": "ETH Zürich",
       "location": "Zürich, CH",
       "description": "2 semesters Bsc Inf",
-      "duration": "2017 - 2018"
+      "duration": [2017, 2018]
     },
     {
       "year": 2018,
       "title": "University of Zürich",
       "location": "Zürich, CH",
       "description": "Bachelor of Science in Informatics\nExpected graduation in 2022",
-      "duration": "2018 - present"
+      "duration": [2018, -1]
     }
   ],
   "experience": {
@@ -36,7 +36,7 @@
         "title": "Triboni AG",
         "location": "Zürich, CH",
         "description": "Software Engineer\n40%",
-        "duration": "Aug. 2019 - Jul. 2020",
+        "duration": ["2019-08", "2020-07"],
         "details": {
           "type": "bullet-list",
           "data": [
@@ -67,7 +67,7 @@
         "title": "SEC Consult (Schweiz) AG",
         "location": "Zürich, CH",
         "description": "Associate Security Consultant (Intern)\n100%",
-        "duration": "Jul. 2020 - Sept. 2020",
+        "duration": ["2020-07", "2020-09"],
         "details": {
           "type": "bullet-list",
           "data": [
@@ -97,7 +97,7 @@
         "title": "SEC Consult (Schweiz) AG",
         "location": "Zürich, CH",
         "description": "Security Consultant \n40%",
-        "duration": "Oct. 2020 - present",
+        "duration": ["2020-10", -1],
         "details": {
           "type": "bullet-list",
           "data": [
@@ -129,7 +129,7 @@
         "title": "University of Zürich",
         "location": "Zürich, CH",
         "description": "Informatics I Tutor",
-        "duration": "Sep. 2019 - Dez. 2019"
+        "duration": ["2019-09", "2019-12"]
       }
     ]
   },

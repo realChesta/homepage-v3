@@ -33,13 +33,13 @@ const ExperienceCard = props => {
                             Work Experience
                         </IconSubTitle>
                     </div>
-                    <LinearTimeline items={props.experience.work}/>
+                    <LinearTimeline duration items={props.experience.work}/>
                     <div className={classes.inset}>
                         <IconSubTitle icon="article">
                             Other Experience
                         </IconSubTitle>
                     </div>
-                    <EventList items={props.experience.other}/>
+                    <EventList items={props.experience.other} />
                 </CardContent>
             </Card>
         </CardWrapper>

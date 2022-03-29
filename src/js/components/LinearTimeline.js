@@ -20,6 +20,7 @@ import RoundIcon from "./RoundIcon.js";
 import LineIcon from "./LineIcon.js";
 import IconButton from "@material-ui/core/IconButton";
 import BulletList from "./BulletList";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const useStyles = makeStyles(theme => ({
     oppositeContent: {
@@ -91,7 +92,7 @@ const LinearTimeline = props => {
                 />
             </TimelineSeparator>
             <TimelineContent>
-                <EventCard event={item}/>
+                <EventCard event={item} duration={props.duration}/>
             </TimelineContent>
         </TimelineItem>
     );
@@ -113,7 +114,8 @@ const LinearTimeline = props => {
 LinearTimeline.propTypes = {
     items: PropTypes.array.isRequired,
     nowItem: PropTypes.bool,
-    disconnected: PropTypes.bool
+    disconnected: PropTypes.bool,
+    duration: PropTypes.bool
 };
 
 const IconText = props => {
@@ -135,6 +137,56 @@ export const EventCard = props => {
     let details;
 
     const expandProps = item.details ? {} : {style: {cursor: 'default'}};
+
+    const formatSingleDate = s => {
+        let resMom;
+        let resStr;
+        if (isNaN(s)) {
+            resMom = moment(s);
+            resStr = resMom.format("MMM. YYYY")
+        }
+        else if (s === -1) {
+            resMom = moment();
+            resStr = "now";
+        }
+        else {
+            resMom = moment(s.toString());
+            resStr = s.toString();
+        }
+
+        return [resMom, resStr];
+    }
+    const customFormatTimespan = span => {
+        let months = span.months();
+        let years = span.years();
+        let res = `${span.months()} month`;
+        if (months > 1) {
+            res += 's';
+        }
+        if (years > 0) {
+            let add = `${years} year `;
+            if (years > 1) {
+                add += 's';
+            }
+            res = add + res;
+        }
+        return res;
+    };
+    const formatDuration = duration => {
+        let from = formatSingleDate(duration[0]);
+        let to = formatSingleDate(duration[1]);
+
+        let res = `${from[1]} - ${to[1]}`;
+        if (props.duration) {
+            let diff = moment.duration(to[0].diff(from[0]));
+            res = (
+                <Tooltip title={customFormatTimespan(diff)} placement="left">
+                    <Typography>{res}</Typography>
+                </Tooltip>
+            );
+        }
+        return res;
+    };
 
     const handleExpandClick = () => {
         if (item.details) {
@@ -189,7 +241,7 @@ export const EventCard = props => {
             </Accordion>
             <CardActions className={classes.itemFooter}>
                 <Typography color="textSecondary">
-                    {item.duration}
+                    {formatDuration(item.duration)}
                 </Typography>
                 <div style={{marginLeft: 'auto'}}>
                     <IconText icon="place">
