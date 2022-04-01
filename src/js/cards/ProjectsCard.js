@@ -38,12 +38,13 @@ const useStyles = makeStyles(theme => ({
 
 const ProjectsCard = props => {
     const theme = useTheme();
-    const items = props.projects.map(p =>
+    const items = props.projects.map((p, i) =>
         <Project
             title={p.title}
             description={p.description}
             github={p.github}
             site={p.site}
+            key={i}
         />
     );
 
@@ -70,7 +71,7 @@ const ProjectsCard = props => {
 };
 
 ProjectsCard.propTypes = {
-    projects: PropTypes.object
+    projects: PropTypes.array
 };
 
 const Github = () => (

@@ -87,8 +87,8 @@ const TitleCard = () => {
                         Hey there!
                     </Typography>
                     <Typography className={textClass}>
-                        I'm Kyrill, a {getMyAge()} year old third year
-                        informatics student at the University of Zurich.
+                        I'm Kyrill, a {getMyAge()} year old master's
+                        student of informatics at the University of Zurich.
                         My biggest interest is in all things itsec.
                     </Typography>
                 </CardContent>

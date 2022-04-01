@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import makeStyles from "@material-ui/core/styles/makeStyles.js";
-import {EventCard} from "./LinearTimeline.js";
+import EventCard from "./EventCard";
 
 
 const useStyles = makeStyles(theme => ({
@@ -24,6 +24,9 @@ const EventList = props => {
             </div>
         );
     });
+
+    // newest items should be displayed first
+    events.reverse();
 
     return (
         <div className={classes.container}>

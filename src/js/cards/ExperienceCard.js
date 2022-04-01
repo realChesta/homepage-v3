@@ -7,7 +7,6 @@ import IconTitle, {IconSubTitle} from "../components/IconTitle.js";
 import Card from "@material-ui/core/Card";
 import LinearTimeline from "../components/LinearTimeline.js";
 import EventList from "../components/EventList.js";
-import BulletList from "../components/BulletList.js";
 
 const useStyles = makeStyles(theme => ({
     inset: {
@@ -47,8 +46,8 @@ const ExperienceCard = props => {
 };
 
 ExperienceCard.propTypes = {
-    work: PropTypes.object,
-    other: PropTypes.object
+    work: PropTypes.array,
+    other: PropTypes.array
 };
 
 

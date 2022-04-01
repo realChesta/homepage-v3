@@ -42,7 +42,7 @@ const AchievementsCard = props => {
 
     for (let a of props.achievements) {
         items.push(
-            <IconSubTitle icon={a.icon}>{a.title}</IconSubTitle>
+            <IconSubTitle icon={a.icon} key={a.title}>{a.title}</IconSubTitle>
         );
         for (let i of a.items) {
             items.push(
@@ -50,10 +50,11 @@ const AchievementsCard = props => {
                     title={i.title}
                     description={i.description}
                     extra={i.extra}
+                    key={i.title}
                 />
             );
         }
-        items.push(<br/>);
+        items.push(<br key={a.title + "1"}/>);
     }
 
     return (
@@ -71,7 +72,7 @@ const AchievementsCard = props => {
 };
 
 AchievementsCard.propTypes = {
-    achievements: PropTypes.object
+    achievements: PropTypes.array
 };
 
 const Achievement = props => {

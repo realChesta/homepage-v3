@@ -25,8 +25,15 @@
       "year": 2018,
       "title": "University of Zürich",
       "location": "Zürich, CH",
-      "description": "Bachelor of Science in Informatics\nExpected graduation in 2022",
-      "duration": [2018, -1]
+      "description": "Bachelor of Science in Informatics\nGPA pending",
+      "duration": [2018, 2022]
+    },
+    {
+      "year": 2022,
+      "title": "University of Zürich",
+      "location": "Zürich, CH",
+      "description": "Master of Science in Informatics\nExpected graduation in 2024",
+      "duration": [2022, -1]
     }
   ],
   "experience": {
@@ -129,22 +136,37 @@
         "title": "University of Zürich",
         "location": "Zürich, CH",
         "description": "Informatics I Tutor",
-        "duration": ["2019-09", "2019-12"]
+        "duration": ["2019-09", "2019-12"],
+        "details": {
+          "type": "text",
+          "data": "Helped students learn the basics of programming with python"
+        }
+      },
+      {
+        "year": 2022,
+        "title": "University of Zürich",
+        "location": "Zürich, CH",
+        "description": "Software Engineering Lab TA",
+        "duration": ["2022-02", "2022-06"],
+        "details": {
+          "type": "text",
+          "data": "Accompanied multiple teams of students through a semester-long project with scrum-style meetings"
+        }
       }
     ]
   },
   "projects": [
     {
-      "title": "SoNNic",
-      "description": "A machine learning algorithm that autonomously learns to play the first level of Sonic the Hedgehog using neuroevolution.",
-      "github": "https://github.com/realChesta/SoNNic",
-      "site": "https://khux.ch/mng/sonnic"
-    },
-    {
       "title": "Frantic",
       "description": "An online implementation of the swiss card game Frantic (similar to UNO) with a front-end built from scratch using react.js and react-spring. Created in a team of 5 for a university project.",
       "github": "https://github.com/soprafs20-group09/frantic-client",
       "site": "http://frantic.online"
+    },
+    {
+      "title": "SoNNic",
+      "description": "A machine learning algorithm that autonomously learns to play the first level of Sonic the Hedgehog using neuroevolution.",
+      "github": "https://github.com/realChesta/SoNNic",
+      "site": "https://khux.ch/mng/sonnic"
     },
     {
       "title": "Plymouth-Pokemon",

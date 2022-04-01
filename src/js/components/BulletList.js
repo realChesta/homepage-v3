@@ -42,11 +42,15 @@ const BulletList = props => {
         }
 
         items.push(
-            <ListItem key={i} disableGutters>
+            <ListItem key={JSON.stringify(i)} disableGutters>
                 <ListItemIcon className={classes.bulletListItem}>
                     <LineIcon color="primary">{i.icon ?? 'chevron_right'}</LineIcon>
                 </ListItemIcon>
-                <ListItemText primary={i.text} secondary={tags}/>
+                <ListItemText
+                    primary={i.text}
+                    secondary={tags}
+                    secondaryTypographyProps={{component: "div"}}
+                />
             </ListItem>
         );
     }

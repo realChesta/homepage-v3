@@ -25,7 +25,7 @@ const EducationCard = props => {
 };
 
 EducationCard.propTypes = {
-    education: PropTypes.object
+    education: PropTypes.array
 };
 
 export default EducationCard;
