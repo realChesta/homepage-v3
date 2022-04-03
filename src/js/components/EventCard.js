@@ -13,6 +13,7 @@ import CardActions from "@material-ui/core/CardActions";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import LineIcon from "./LineIcon";
 import PropTypes from 'prop-types';
+import GradDetails from "./GradDetails";
 
 const useStyles = makeStyles(theme => ({
     itemTitle: {
@@ -126,7 +127,11 @@ export const EventCard = props => {
             case "bullet-list":
                 details = <BulletList>{item.details.data}</BulletList>;
                 break;
+            case "grad-details":
+                details = <GradDetails details={item.details.data}/>;
+                break;
             case "text":
+            default:
                 details = <Typography color="textSecondary">{item.details.data}</Typography>;
                 break;
         }
