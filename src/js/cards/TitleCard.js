@@ -6,7 +6,7 @@ import {Typography} from "@material-ui/core";
 import {getMyAge} from "../utils.js";
 import IconButton from "@material-ui/core/IconButton";
 import InlineSVG from "react-inlinesvg";
-import SonnicIcon from '../../img/sonnic.svg';
+import LinkedInIcon from '../../img/linkedin.svg';
 import GithubIcon from '../../img/github.svg';
 import RocketLeagueIcon from '../../img/rocket-league.svg';
 import SvgIcon from "@material-ui/core/SvgIcon";
@@ -105,10 +105,10 @@ const TitleCard = () => {
                             <RoundIcon>mail</RoundIcon>
                         </IconButton>
                     </Tooltip>
-                    <Tooltip title='Matura Paper "SoNNic"' placement="right">
-                        <IconButton target="_blank" href="http://khux.ch/mng/sonnic" color="inherit">
-                            <SvgIcon>
-                                <InlineSVG src={SonnicIcon}/>
+                    <Tooltip title='My LinkedIn profile' placement="right">
+                        <IconButton target="_blank" href="https://linkedin.com/in/khux" color="inherit">
+                            <SvgIcon viewBox="0 0 34 34">
+                                <InlineSVG src={LinkedInIcon}/>
                             </SvgIcon>
                         </IconButton>
                     </Tooltip>
