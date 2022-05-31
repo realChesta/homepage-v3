@@ -25,14 +25,24 @@
       "year": 2018,
       "title": "University of Zürich",
       "location": "Zürich, CH",
-      "description": "Bachelor of Science in Informatics\nGPA pending",
-      "duration": [2018, 2022]
+      "description": "Bachelor of Science in Informatics\ngraduated with honors",
+      "duration": [2018, 2022],
+      "details": {
+        "type": "grad-details",
+        "data": {
+          "major": "People-Oriented Computing",
+          "minor": "History, Society, Politics",
+          "thesis": "Design and Implementation of a Traffic Sinkhole for Cyberattack Analysis",
+          "gpa": "5.2",
+          "honors": "magna cum laude"
+        }
+      }
     },
     {
       "year": 2022,
       "title": "University of Zürich",
       "location": "Zürich, CH",
-      "description": "Master of Science in Informatics\nExpected graduation in 2024",
+      "description": "Master of Science in Informatics\nexpected graduation in 2024",
       "duration": [2022, -1]
     }
   ],
@@ -50,17 +60,12 @@
             {
               "text": "frontend development",
               "icon": "language",
-              "tags": [
-                "react.js"
-              ]
+              "tags": ["react.js"]
             },
             {
               "text": "backend development",
               "icon": "dns",
-              "tags": [
-                "java",
-                ".net"
-              ]
+              "tags": ["java", ".net"]
             },
             {
               "text": "reverse engineering",
@@ -81,20 +86,12 @@
             {
               "text": "revamp of reporting tool",
               "icon": "code",
-              "tags": [
-                "react.js",
-                "node.js",
-                "docker",
-                "mongo"
-              ]
+              "tags": ["react.js", "node.js", "docker", "mongo"]
             },
             {
               "text": "penetration testing",
-              "icon": "bug_report",
-              "tags": [
-                "web",
-                "owasp"
-              ]
+              "icon": "location_searching",
+              "tags": ["web", "owasp"]
             }
           ]
         }
@@ -110,21 +107,17 @@
           "data": [
             {
               "text": "penetration testing",
-              "icon": "bug_report",
-              "tags": [
-                "web",
-                "owasp"
-              ]
+              "icon": "location_searching",
+              "tags": ["web", "owasp"]
+            },
+            {
+              "text": "Swisscom Bug Bounty Support",
+              "icon": "bug_report"
             },
             {
               "text": "reporting tool development",
               "icon": "code",
-              "tags": [
-                "react.js",
-                "node.js",
-                "docker",
-                "mongo"
-              ]
+              "tags": ["react.js", "node.js", "docker", "mongo"]
             }
           ]
         }
@@ -150,7 +143,7 @@
         "duration": ["2022-02", "2022-06"],
         "details": {
           "type": "text",
-          "data": "Accompanied multiple teams of students through a semester-long project with scrum-style meetings"
+          "data": "Accompanied multiple teams of students through a semester-long project (react.js, spring boot) with scrum-style meetings"
         }
       }
     ]
