@@ -59,6 +59,7 @@ const PersonalCard = () => {
                         <GridHeader>Preferred Programming Languages</GridHeader>
                         <GridValue>
                             <GridChip level={3} label="React, node">JavaScript</GridChip>
+                            <GridChip level={3} label="React, node">TypeScript</GridChip>
                             <GridChip level={3} label=".NET, WinForms, ...">C#</GridChip>
                             <GridChip level={3}>Python</GridChip>
                             <GridChip level={3}>Java</GridChip>

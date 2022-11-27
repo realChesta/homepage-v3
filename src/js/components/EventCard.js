@@ -140,7 +140,11 @@ export const EventCard = props => {
                 break;
             case "text":
             default:
-                details = <Typography color="textSecondary">{item.details.data}</Typography>;
+                details = (
+                  <Typography color="textSecondary" style={{lineHeight: '1.25em'}}>
+                    {item.details.data}
+                  </Typography>
+                );
                 break;
         }
     }
