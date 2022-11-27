@@ -42,6 +42,10 @@ const useStyles = makeStyles(theme => ({
         lineHeight: '1.1em',
         whiteSpace: 'pre-line'
     },
+    itemLocation: {
+        marginLeft: 'auto !important',
+        whiteSpace: 'pre-line'
+    },
     itemFooter: {
         justifyContent: 'space-between',
         flexWrap: 'wrap',
@@ -52,6 +56,10 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         alignItems: 'center',
         color: theme.palette.text.secondary
+    },
+    iconTextTypo: {
+        lineHeight: 1.1,
+        marginLeft: '0.2em'
     }
 }));
 
@@ -175,10 +183,10 @@ export const EventCard = props => {
                 </AccordionDetails>
             </Accordion>
             <CardActions className={classes.itemFooter}>
-                <Typography color="textSecondary" component="div">
+                <Typography color="textSecondary" component="div" className={classes.itemDuration}>
                     {formatDuration(item.duration)}
                 </Typography>
-                <div style={{marginLeft: 'auto'}}>
+                <div className={classes.itemLocation}>
                     <IconText icon="place">
                         {item.location}
                     </IconText>

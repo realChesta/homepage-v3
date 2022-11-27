@@ -66,8 +66,8 @@ const PersonalCard = () => {
                         <GridHeader>Security Expertise</GridHeader>
                         <GridValue>
                             <GridChip level={3} label="mostly OWASP top 10">Web</GridChip>
+                            <GridChip level={3}>Linux</GridChip>
                             <GridChip level={2}>Windows</GridChip>
-                            <GridChip level={2}>Linux</GridChip>
                         </GridValue>
                     </Grid>
                 </CardContent>
