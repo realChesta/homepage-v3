@@ -42,7 +42,7 @@
       "year": 2022,
       "title": "University of Zürich",
       "location": "Zürich, CH",
-      "description": "Master of Science in Informatics\nexpected graduation in 2024",
+      "description": "Master of Science in Informatics",
       "duration": [2022, -1]
     }
   ],
@@ -101,7 +101,7 @@
         "title": "SEC Consult (Schweiz) AG",
         "location": "Zürich, CH",
         "description": "Security Consultant \n40%",
-        "duration": ["2020-10", -1],
+        "duration": ["2020-10", "2022-12"],
         "details": {
           "type": "bullet-list",
           "data": [
@@ -118,6 +118,26 @@
               "text": "reporting tool development",
               "icon": "code",
               "tags": ["react.js", "node.js", "docker", "mongo"]
+            }
+          ]
+        }
+      },
+      {
+        "year": 2022,
+        "title": "Generai",
+        "location": "Zürich, CH\nSan Francisco, US",
+        "description": "Co-Founder",
+        "duration": ["2022-06", -1],
+        "details": {
+          "type": "bullet-list",
+          "data": [
+            {
+              "text": "founded with 3 other co-founders",
+              "icon": "flag"
+            },
+            {
+              "text": "responsible for web presence",
+              "icon": "language"
             }
           ]
         }
@@ -150,10 +170,15 @@
   },
   "projects": [
     {
+      "title": "Generai",
+      "description": "Generai creates beautiful high-resolution artworks purely from text you provide, and even allows you to buy posters and other physical forms of your created artworks comfortably on the same platform.",
+      "site": "https://generai.art"
+    },
+    {
       "title": "Frantic",
       "description": "An online implementation of the swiss card game Frantic (similar to UNO) with a front-end built from scratch using react.js and react-spring. Created in a team of 5 for a university project.",
       "github": "https://github.com/soprafs20-group09/frantic-client",
-      "site": "http://frantic.online"
+      "site": "https://frantic.online"
     },
     {
       "title": "SoNNic",
@@ -165,28 +190,28 @@
       "title": "Plymouth-Pokemon",
       "description": "A shell script that generates a Plymouth theme showing a randomly chosen Pokemon jumping until the boot process is finished. It allows you to enjoy a new Pokemon on every boot!",
       "github": "https://github.com/realChesta/plymouth-pokemon"
-    },
-    {
-      "title": "SyncPad",
-      "description": "An online text editor written using react.js with real-time collaboration, allowing multiple users to work on the same file simultaneously.",
-      "github": "https://github.com/realChesta/syncpad"
     }
   ],
   "achievements": [
     {
-      "title": "Coding Competitions",
-      "icon": "code",
+      "title": "Achievements",
+      "icon": "stars",
       "items": [
         {
           "title": "Google Hash Code 2018",
           "description": "in a team of four",
           "extra": "placed 81 / 4856"
+        },
+        {
+          "title": "Y Combinator Winter Batch 2023",
+          "description": "with co-founded startup Generai",
+          "extra": "2022 / 2023"
         }
       ]
     },
     {
       "title": "Awards",
-      "icon": "stars",
+      "icon": "emoji_events",
       "items": [
         {
           "title": "Niklaus Wirth Young Talent Computer Science Award",
