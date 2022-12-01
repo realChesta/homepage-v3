@@ -15,6 +15,8 @@ import AchievementsCard from "./cards/AchievementsCard.js";
 import ProjectsCard from "./cards/ProjectsCard.js";
 import {CircularProgress} from "@material-ui/core";
 
+const dataUrl = 'https://raw.githubusercontent.com/realChesta/homepage-v3/master/public/data.json';
+
 const useStyles = makeStyles(theme => ({
     outerContainer: {
         width: '100%',
@@ -64,7 +66,7 @@ const Home = () => {
         <Brightness4Icon className={classes.themeIcon}/>;
 
     const loadData = async () => {
-        const res = await fetch('./data.json');
+        const res = await fetch(dataUrl);
         const d = await res.json();
         setData(d);
     }
