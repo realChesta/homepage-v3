@@ -8,7 +8,7 @@ import CardWrapper from "../components/CardWrapper.js";
 import makeStyles from "@material-ui/core/styles/makeStyles.js";
 import Chip from "@material-ui/core/Chip";
 import Tooltip from "@material-ui/core/Tooltip";
-import {fade} from "@material-ui/core";
+import { fade } from "@material-ui/core";
 import useTheme from "@material-ui/core/styles/useTheme.js";
 
 const useStyles = makeStyles(theme => ({
@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const PersonalCard = () => {
+const PersonalCard = props => {
     return (
         <CardWrapper>
             <Card>
@@ -42,33 +42,33 @@ const PersonalCard = () => {
                     </IconTitle>
                     <Grid container spacing={2}>
                         <GridHeader>Name</GridHeader>
-                        <GridValue>Kyrill Hux</GridValue>
+                        <GridValue>{props.data.name}</GridValue>
                         <GridHeader>E-Mail</GridHeader>
                         <GridValue>
-                            <Mail>kyrill.hux@gmail.com</Mail>
-                            <br/>
-                            <Mail>kyrill.hux@uzh.ch</Mail>
+                            {props.data.emails.map(email => (
+                                <>
+                                    <Mail>{email}</Mail>
+                                    <br />
+                                </>
+                            ))}
                         </GridValue>
                         <GridHeader>Languages</GridHeader>
                         <GridValue>
-                            <GridChip level={3} label="native">German</GridChip>
-                            <GridChip level={3} label="fluent">English</GridChip>
-                            <GridChip level={3} label="fluent">Russian</GridChip>
-                            <GridChip level={2} label="basic">French</GridChip>
+                            {props.data.languages.map(lang => (
+                                <GridChip level={lang.level} label={lang.hint}>{lang.name}</GridChip>
+                            ))}
                         </GridValue>
                         <GridHeader>Preferred Programming Languages</GridHeader>
                         <GridValue>
-                            <GridChip level={3} label="React, node">JavaScript</GridChip>
-                            <GridChip level={3} label="React, node">TypeScript</GridChip>
-                            <GridChip level={3} label=".NET, WinForms, ...">C#</GridChip>
-                            <GridChip level={3}>Python</GridChip>
-                            <GridChip level={3}>Java</GridChip>
+                            {props.data.programming.map(lang => (
+                                <GridChip level={lang.level} label={lang.hint}>{lang.name}</GridChip>
+                            ))}
                         </GridValue>
                         <GridHeader>Security Expertise</GridHeader>
                         <GridValue>
-                            <GridChip level={3} label="mostly OWASP top 10">Web</GridChip>
-                            <GridChip level={3}>Linux</GridChip>
-                            <GridChip level={2}>Windows</GridChip>
+                            {props.data.security.map(exp => (
+                                <GridChip level={exp.level} label={exp.hint}>{exp.name}</GridChip>
+                            ))}
                         </GridValue>
                     </Grid>
                 </CardContent>
@@ -123,7 +123,7 @@ const GridChip = props => {
             size="small"
             className={classes.chip}
             color="primary"
-            style={{backgroundColor: color}}
+            style={{ backgroundColor: color }}
         />;
 
     if (props.label) {

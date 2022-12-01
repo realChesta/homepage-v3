@@ -84,7 +84,7 @@ const Home = () => {
                     breakpointCols={breakpoints}
                 >
                     <TitleCard/>
-                    <PersonalCard/>
+                    <PersonalCard data={data.personal}/>
                     <EducationCard education={data.education}/>
                     <ExperienceCard experience={data.experience}/>
                     <ProjectsCard projects={data.projects}/>

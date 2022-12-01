@@ -88,7 +88,7 @@ const TitleCard = () => {
                     </Typography>
                     <Typography className={textClass}>
                         I'm Kyrill, a {getMyAge()} year old master's
-                        student of informatics at the University of Zurich.
+                        student of informatics at the University of Zurich and co-founder of Generai.
                         My biggest interest is in all things itsec.
                     </Typography>
                 </CardContent>

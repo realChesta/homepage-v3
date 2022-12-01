@@ -1,32 +1,114 @@
 {
+  "personal": {
+    "name": "Kyrill Hux",
+    "emails": [
+      "kyrill@generai.art",
+      "kyrill.hux@gmail.com",
+      "kyrill.hux@uzh.ch"
+    ],
+    "languages": [
+      {
+        "name": "german",
+        "hint": "native",
+        "level": 3
+      },
+      {
+        "name": "english",
+        "hint": "fluent",
+        "level": 3
+      },
+      {
+        "name": "russian",
+        "hint": "fluent",
+        "level": 3
+      },
+      {
+        "name": "french",
+        "hint": "basic",
+        "level": 2
+      }
+    ],
+    "programming": [
+      {
+        "name": "JavaScript",
+        "hint": "react, node",
+        "level": 3
+      },
+      {
+        "name": "TypeScript",
+        "hint": "react, node",
+        "level": 3
+      },
+      {
+        "name": "C#",
+        "hint": ".NET, WinForms, ...",
+        "level": 3
+      },
+      {
+        "name": "Python",
+        "level": 3
+      },
+      {
+        "name": "Java",
+        "level": 3
+      }
+    ],
+    "security": [
+      {
+        "name": "Web",
+        "hint": "mostly OWASP top 10",
+        "level": 3
+      },
+      {
+        "name": "Linux",
+        "level": 3
+      },
+      {
+        "name": "Windows",
+        "level": 2
+      }
+    ]
+  },
   "education": [
     {
       "year": 2008,
       "title": "iDSP",
       "location": "Paris, FR",
       "description": "internationale Deutsche Schule Paris",
-      "duration": [2008, 2014]
+      "duration": [
+        2008,
+        2014
+      ]
     },
     {
       "year": 2014,
       "title": "MNG Rämibühl",
       "location": "Zürich, CH",
       "description": "Swiss Matura",
-      "duration": [2014, 2017]
+      "duration": [
+        2014,
+        2017
+      ]
     },
     {
       "year": 2017,
       "title": "ETH Zürich",
       "location": "Zürich, CH",
       "description": "2 semesters Bsc Inf",
-      "duration": [2017, 2018]
+      "duration": [
+        2017,
+        2018
+      ]
     },
     {
       "year": 2018,
       "title": "University of Zürich",
       "location": "Zürich, CH",
       "description": "Bachelor of Science in Informatics\ngraduated with honors",
-      "duration": [2018, 2022],
+      "duration": [
+        2018,
+        2022
+      ],
       "details": {
         "type": "grad-details",
         "data": {
@@ -43,7 +125,10 @@
       "title": "University of Zürich",
       "location": "Zürich, CH",
       "description": "Master of Science in Informatics",
-      "duration": [2022, -1]
+      "duration": [
+        2022,
+        -1
+      ]
     }
   ],
   "experience": {
@@ -53,19 +138,27 @@
         "title": "Triboni AG",
         "location": "Zürich, CH",
         "description": "Software Engineer\n40%",
-        "duration": ["2019-08", "2020-07"],
+        "duration": [
+          "2019-08",
+          "2020-07"
+        ],
         "details": {
           "type": "bullet-list",
           "data": [
             {
               "text": "frontend development",
               "icon": "language",
-              "tags": ["react.js"]
+              "tags": [
+                "react.js"
+              ]
             },
             {
               "text": "backend development",
               "icon": "dns",
-              "tags": ["java", ".net"]
+              "tags": [
+                "java",
+                ".net"
+              ]
             },
             {
               "text": "reverse engineering",
@@ -79,19 +172,30 @@
         "title": "SEC Consult (Schweiz) AG",
         "location": "Zürich, CH",
         "description": "Associate Security Consultant (Intern)\n100%",
-        "duration": ["2020-07", "2020-09"],
+        "duration": [
+          "2020-07",
+          "2020-09"
+        ],
         "details": {
           "type": "bullet-list",
           "data": [
             {
               "text": "revamp of reporting tool",
               "icon": "code",
-              "tags": ["react.js", "node.js", "docker", "mongo"]
+              "tags": [
+                "react.js",
+                "node.js",
+                "docker",
+                "mongo"
+              ]
             },
             {
               "text": "penetration testing",
               "icon": "location_searching",
-              "tags": ["web", "owasp"]
+              "tags": [
+                "web",
+                "owasp"
+              ]
             }
           ]
         }
@@ -101,14 +205,20 @@
         "title": "SEC Consult (Schweiz) AG",
         "location": "Zürich, CH",
         "description": "Security Consultant \n40%",
-        "duration": ["2020-10", "2022-12"],
+        "duration": [
+          "2020-10",
+          "2022-12"
+        ],
         "details": {
           "type": "bullet-list",
           "data": [
             {
               "text": "penetration testing",
               "icon": "location_searching",
-              "tags": ["web", "owasp"]
+              "tags": [
+                "web",
+                "owasp"
+              ]
             },
             {
               "text": "Swisscom Bug Bounty Support",
@@ -117,7 +227,12 @@
             {
               "text": "reporting tool development",
               "icon": "code",
-              "tags": ["react.js", "node.js", "docker", "mongo"]
+              "tags": [
+                "react.js",
+                "node.js",
+                "docker",
+                "mongo"
+              ]
             }
           ]
         }
@@ -127,7 +242,10 @@
         "title": "Generai",
         "location": "Zürich, CH\nSan Francisco, US",
         "description": "Co-Founder",
-        "duration": ["2022-06", -1],
+        "duration": [
+          "2022-06",
+          -1
+        ],
         "details": {
           "type": "bullet-list",
           "data": [
@@ -149,7 +267,10 @@
         "title": "University of Zürich",
         "location": "Zürich, CH",
         "description": "Informatics I Tutor",
-        "duration": ["2019-09", "2019-12"],
+        "duration": [
+          "2019-09",
+          "2019-12"
+        ],
         "details": {
           "type": "text",
           "data": "Helped students learn the basics of programming with python"
@@ -160,7 +281,10 @@
         "title": "University of Zürich",
         "location": "Zürich, CH",
         "description": "Software Engineering Lab TA",
-        "duration": ["2022-02", "2022-06"],
+        "duration": [
+          "2022-02",
+          "2022-06"
+        ],
         "details": {
           "type": "text",
           "data": "Accompanied multiple teams of students through a semester-long project (react.js, spring boot) with scrum-style meetings"
