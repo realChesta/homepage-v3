@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import {Typography} from "@material-ui/core";
-import {getMyAge} from "../utils.js";
+import {templatized, getMyAge} from "../utils.js";
 import IconButton from "@material-ui/core/IconButton";
 import InlineSVG from "react-inlinesvg";
 import LinkedInIcon from '../../img/linkedin.svg';
@@ -66,7 +66,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const TitleCard = () => {
+const TitleCard = props => {
     const classes = useStyles();
 
     let cardRootClass = classes.cardRoot;
@@ -84,12 +84,10 @@ const TitleCard = () => {
             <Card className={cardRootClass}>
                 <CardContent className={classes.cardContent}>
                     <Typography variant="h2" className={classes.helloTypo}>
-                        Hey there!
+                        {props.data.shout}
                     </Typography>
                     <Typography className={textClass}>
-                        I'm Kyrill, a {getMyAge()} year old master's
-                        student of informatics at the University of Zurich and co-founder of Generai.
-                        My biggest interest is in all things itsec.
+                        {templatized(props.data.summary, {age: getMyAge()})}
                     </Typography>
                 </CardContent>
                 <CardActions className={cardActionsClass}>

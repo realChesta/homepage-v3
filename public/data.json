@@ -1,4 +1,8 @@
 {
+  "title": {
+    "shout": "Hey there!",
+    "summary": "I'm Kyrill, a ${age} year old master's student of informatics at the University of Zurich and co-founder of Generai. My biggest interest is in all things itsec."
+  },
   "personal": {
     "name": "Kyrill Hux",
     "emails": [

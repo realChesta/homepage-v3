@@ -83,7 +83,7 @@ const Home = () => {
                     columnClassName={classes.column}
                     breakpointCols={breakpoints}
                 >
-                    <TitleCard/>
+                    <TitleCard data={data.title}/>
                     <PersonalCard data={data.personal}/>
                     <EducationCard education={data.education}/>
                     <ExperienceCard experience={data.experience}/>
