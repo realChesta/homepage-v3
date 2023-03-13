@@ -1,12 +1,12 @@
 {
   "title": {
     "shout": "Hey there!",
-    "summary": "I'm Kyrill, co-founder of Generai, a generative AI startup featured in YC W23. Whenever I have time next to that, I love learning more about all things itsec."
+    "summary": "I'm Kyrill, co-founder of Waveline, a generative AI startup featured in YC W23. Whenever I have time next to that, I love learning more about all things itsec."
   },
   "personal": {
     "name": "Kyrill Hux",
     "emails": [
-      "kyrill@generai.art",
+      "kyrill@waveline.ai",
       "kyrill.hux@gmail.com",
       "kyrill.hux@uzh.ch"
     ],
@@ -243,7 +243,7 @@
       },
       {
         "year": 2022,
-        "title": "Generai",
+        "title": "Waveline",
         "location": "Zürich, CH\nSan Francisco, US",
         "description": "Co-Founder",
         "duration": [
@@ -332,7 +332,7 @@
         },
         {
           "title": "Y Combinator Winter Batch 2023",
-          "description": "with co-founded startup Generai",
+          "description": "with co-founded startup Waveline",
           "extra": "2022 / 2023"
         }
       ]
