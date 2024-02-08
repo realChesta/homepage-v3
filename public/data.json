@@ -1,12 +1,12 @@
 {
   "title": {
     "shout": "Hey there!",
-    "summary": "I'm Kyrill, co-founder of Waveline, a generative AI startup featured in YC W23. Whenever I have time next to that, I love learning more about all things itsec."
+    "summary": "I'm Kyrill, co-founder of nunu.ai, a YC W23 startup building the first multimodal agents to test and play games. Whenever I have time next to that, I love learning more about all things itsec."
   },
   "personal": {
     "name": "Kyrill Hux",
     "emails": [
-      "kyrill@waveline.ai"
+      "kyrill@nunu.ai"
     ],
     "languages": [
       {
@@ -241,7 +241,7 @@
       },
       {
         "year": 2022,
-        "title": "Waveline",
+        "title": "nunu.ai",
         "location": "Zürich, CH\nSan Francisco, US",
         "description": "Co-Founder",
         "duration": [
@@ -252,7 +252,7 @@
           "type": "bullet-list",
           "data": [
             {
-              "text": "founded with 3 other co-founders",
+              "text": "founded with 2 other co-founders",
               "icon": "flag"
             },
             {
@@ -295,6 +295,11 @@
     ]
   },
   "projects": [
+    {
+      "title": "nunu.ai",
+      "description": "nunu.ai is building the first multimodal agents to test and play games. We infuse AI agents into the game development process, starting at QA all the way to player simulation.",
+      "site": "https://nunu.ai"
+    },
     {
       "title": "Generai",
       "description": "Generai creates beautiful high-resolution artworks purely from text you provide, and even allows you to buy posters and other physical forms of your created artworks comfortably on the same platform.",
