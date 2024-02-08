@@ -121,16 +121,6 @@
           "honors": "magna cum laude"
         }
       }
-    },
-    {
-      "year": 2022,
-      "title": "University of Zürich",
-      "location": "Zürich, CH",
-      "description": "Master of Science in Informatics",
-      "duration": [
-        2022,
-        -1
-      ]
     }
   ],
   "experience": {
@@ -335,7 +325,7 @@
         },
         {
           "title": "Y Combinator Winter Batch 2023",
-          "description": "with co-founded startup Waveline",
+          "description": "with co-founded startup nunu.ai",
           "extra": "2022 / 2023"
         }
       ]
