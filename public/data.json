@@ -1,7 +1,7 @@
 {
   "title": {
     "shout": "Hey there!",
-    "summary": "I'm Kyrill, co-founder of nunu.ai, a YC W23 startup building the first multimodal agents to test and play games. Whenever I have time next to that, I love learning more about all things itsec."
+    "summary": "I'm Kyrill, co-founder of nunu.ai, a YC W23 and SR003 startup building the first multimodal agents to test and play games (and more!). Whenever I have time next to that, I love learning more about all things itsec."
   },
   "personal": {
     "name": "Kyrill Hux",
@@ -319,15 +319,20 @@
       "icon": "stars",
       "items": [
         {
-          "title": "Google Hash Code 2018",
-          "description": "in a team of four",
-          "extra": "placed 81 / 4856"
+          "title": "a16z SPEEDRUN SR003"
+          "description": "with co-founded startup nunu.ai",
+          "extra": "2024"
         },
         {
           "title": "Y Combinator Winter Batch 2023",
           "description": "with co-founded startup nunu.ai",
-          "extra": "2022 / 2023"
+          "extra": "2023"
         }
+        {
+          "title": "Google Hash Code 2018",
+          "description": "in a team of four",
+          "extra": "placed 81 / 4856"
+        },
       ]
     },
     {
